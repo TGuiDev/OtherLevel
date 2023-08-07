@@ -239,6 +239,7 @@ nav {
     width: 100%;
     min-height: 5vh;
     background: var(--cor1);
+    box-shadow: 2px 0px 11px black;
     display: flex;
     justify-content: space-between;
     align-items: center;

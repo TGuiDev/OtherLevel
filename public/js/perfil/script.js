@@ -1,5 +1,4 @@
 
-
 const home = document.getElementById("home");
 home.addEventListener("click", function() {
   window.location.href = "/";
@@ -33,17 +32,15 @@ if(logout){
 }
 
 
+// window.addEventListener('scroll', function() {
+//   var navbar = document.getElementById('nav');
   
-
-window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('nav');
-  
-  if (window.pageYOffset > 1) {
-    navbar.classList.add('fixed');
-  } else {
-    navbar.classList.remove('fixed');
-  }
-});
+//   if (window.pageYOffset > 1) {
+//     navbar.classList.add('fixed');
+//   } else {
+//     navbar.classList.remove('fixed');
+//   }
+// });
 
 const dropdownBtn = document.getElementById("drop");
 const dropdownContent = document.getElementById("dropdownContent");
