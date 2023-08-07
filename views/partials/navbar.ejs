@@ -1,0 +1,54 @@
+<nav id="nav" class="nav">
+    <div class="logo" id="logo" >
+        <button id="home">
+            <img src="../lib/logo/logo.svg" alt="">
+            Other Level
+        </button>
+    </div>
+    <div class="buttons" id="buttons" >
+        <button class="normal" id="criadores">Criadores</button>
+        <button class="normal" id="projetos">Projetos</button>
+        <% if (currentUser) { %>
+            <button class="btns post" id="post">
+            <span class="list-item-text nome post"><i class="fa-solid fa-plus"></i> Post</span>
+            </button>
+            <div class="dropdown">
+            <button class="dropdown-btn btns" id="drop">
+                <img class="img" src="<%= currentUser.Avatar %>" alt="">
+                <%= currentUser.NomeDeUsuario %> 
+            </button>
+            <div class="dropdown-content" id="dropdownContent">
+                <!-- Conteúdo do dropdown -->
+                <button class="btn-drop" id="perfil">Perfil</button>
+                <button class="btn-drop logout" id="logout">Sair</button>
+            </div>
+            </div>                          
+        <% }  else { %>
+        <button class="normal active btns" id="login">login</button>
+            <% } %>
+    </div>
+</nav>
+<div class="navhamburger">
+<div class="logomarca">
+    <img src="../lib/logo/logo.svg" alt="">
+    Other Level
+</div>
+<div class="hamburger">
+    <button class="dropnav" id="dropnav">
+    <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="hamburgerdropdown">
+    <div class="list-navbtns">
+        <button class="" id="criadoress">Criadores</button>
+        <button class="" id="projetoss">Projetos</button>
+        <% if (currentUser) { %>
+        <button class="" id="perfill">Perfil</button>
+        <button class="posti" id="postt">Post</button>
+        <button class="logout" id="logoutt">Sair</button>                       
+    <% }  else { %>
+        <button class="normal active btns" id="loginn">login</button>
+        <% } %>
+    </div>
+    </div>
+</div>
+</div>

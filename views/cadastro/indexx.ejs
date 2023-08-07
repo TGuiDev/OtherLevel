@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Other Level</title>
+
+    <!-- LINK's -->
+    <link rel="stylesheet" href="../css/cadastro/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="sign-in-js">
+    <main>
+        <div class="login">
+            <div class="container">
+                <div class="content first-content">
+                    <div class="first-column fade-in">
+                        <h2 class="title title-primary">Bem Vindo</h2>
+                        <p class="description description-primary">Ja possui uma conta?</p>
+                        <button id="signin" class="btn btn-primary">Login</button>
+                    </div>    
+                    <div class="second-column">
+                        <h2 class="title title-second">Criar Conta</h2>
+                        <p class="description description-second" id="passo">Passo 1</p>
+                        <button id="botao-voltar" class="voltar"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                        <form action="/cadastro" method="POST" class="form">
+                            <div class="cont1" id="cont1">
+                                <label class="label-input" for="">
+                                    <i class="far fa-solid fa-pencil icon-modify"></i>
+                                    <input type="text" id="first-name" name="firstName" placeholder="Nome" required>
+                                </label>
+    
+                                <label class="label-input" for="">
+                                    <i class="far fa-solid fa-pen icon-modify"></i>
+                                    <input type="text" id="last-name" name="lastName" placeholder="Sobrenome" required>
+                                </label>
+                                
+                                <label class="label-input" for="">
+                                    <i class="far fa-envelope icon-modify"></i>
+                                    <input type="email" id="email" name="email" placeholder="Email" required>
+                                </label>
+                                
+                                <label class="label-input" for="">
+                                    <i class="fas fa-lock icon-modify"></i>
+                                    <input type="password" id="password" name="password" placeholder="Senha" required>
+                                </label>
+                            </div>
+                            <div class="cont2" id="cont2">
+
+                                <label class="label-input" for="">
+                                    <i class="far fa-solid fa-user icon-modify"></i>
+                                    <input type="text" id="username" name="username" placeholder="Nome de Usuário" required>
+                                </label>
+                                
+                                <label class="label-input" for="">
+                                    <i class="fa-solid fa-cake-candles icon-modify far"></i>
+                                    <input type="number" id="age" name="age" placeholder="Idade" min="18" max="99" required>
+                                </label>
+    
+                                <label class="label-input" for="">
+                                    <i class="fa-solid fa-phone far icon-modify"></i>
+                                    <input type="text" id="phone" name="phone" placeholder="Telefone" required>
+                                </label>
+                                
+                                <!-- <label class="label-input" for="">
+                                    <i class="fa-solid fa-calendar-days far icon-modify"></i>
+                                    <input type="date" id="date-of-birth" name="dateOfBirth" placeholder="Data de Nascimento" required>
+                                </label> -->
+                                
+                                <label class="label-input" for="">
+                                    <i class="fa-solid fa-transgender far icon-modify"></i>
+                                    <select id="gender" name="gender"  required>
+                                        <option class="genero" value="Homem">Homem</option>
+                                        <option class="genero" value="Mulher">Mulher</option>
+                                        <option class="genero" value="Outro">Outro</option>
+                                      </select>
+                                    </label>
+                                </label>
+                                
+                                <!-- <label class="label-input" for="">
+                                    <i class="fa-solid fa-map-location-dot far icon-modify"></i>
+                                    <input type="text" id="address" name="address" placeholder="Endereço" required>
+                                </label> -->
+                            </div>   
+                        <button id="botao-concluir" class="btn concluir continuar btn-second">Concluir</button>
+                        </form>
+                        <div id="error">
+                            <label  id="step1ErrorMsg"><i class="fa-solid fa-triangle-exclamation"></i> Verifique se todos os campos foram preenchidos</label>
+                        </div>
+                        <button id="botao-avancar" class="btn continuar btn-second">Continuar</button>
+                    </div>
+                </div>
+                <div class="content second-content">
+                    <div id="first-column fade-in" class="first-column fade-in">
+                        <h2 class="title title-primary">Olá 👋</h2>
+                        <p class="description description-primary">É novo aqui?</p>
+                        <button id="signup" class="btn btn-primary">Registro</button>
+                    </div>
+                    <div class="second-column">
+                        <h2 class="title title-second">Login</h2>
+                          <form class="form" method="POST" action="/login">
+                            <label class="label-input" for="">
+                              <i class="far fa-envelope icon-modify"></i>
+                              <input type="email" name="emaillogin" id="emaillogin" placeholder="Email" required>
+                            </label>
+                        
+                            <label class="label-input" for="">
+                              <i class="fas fa-lock icon-modify"></i>
+                              <input type="password" name="passwordlogin" id="passwordlogin" placeholder="Senha" required>
+                            </label>
+                        
+                            <!-- <a class="password" href="#">Esqueceu a senha?</a> DESATIVEI PQ NN FIZ UM SISTEMA MT LEGAL, AINDA VOU MELHORAR -->
+                            <div id="message" class="display-none err"><%= message %></div>                            
+                            <button class="btn btn-second" type="submit">Login</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </main>
+</body>
+</html>
+<script src="../js/cadastro/script.js"></script>

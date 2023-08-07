@@ -1,0 +1,13 @@
+<!-- all.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todas as imagens</title>
+</head>
+<body>
+  <h1>Todas as imagens</h1>
+  <% posts.forEach((post) => { %>
+    <img src="../<%= post.fotos %>" alt="Imagem">
+  <% }) %>
+</body>
+</html>

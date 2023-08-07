@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2? família=Oswald:wght@200&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.1s ease-in-out;
+}
+
+:root{
+  --navbar: #000;
+  --branco: #ffffff;
+  --preto: #000000;
+  --verde: #19a463;
+  --vinho: #720022;
+  --roxo-vidro: #ececec28;
+  --cor1: #632ed6;
+  --cor2: #1a1f38;
+  --cor3: #eeeeee;
+  --cor4: #424242;
+  --cor5: #34495e;
+  --cor-erro: #ff0035;
+  --corinput: #e2e2e2b4;
+}
+.navhamburger{
+  display: none;
+}
+.logomarca{
+  padding: 0 0 0 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 12px;
+}
+.navhamburger .logomarca img{
+  width: 50px;
+}
+
+.hamburgerdropwdown{
+  position: relative;
+  display: inline-block;
+  display: none;
+}
+
+
+nav {
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    min-height: 5vh;
+    background: transparent;
+    display: flex;
+    flex-wrap: nowrap !important;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px;
+}
+  
+.nav .fixed {
+    position: fixed;
+    background: var(--roxo-vidro);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+  
+.logo {
+    height: 8vh;
+    width: 70%;
+    text-align: center;
+}
+  
+#home {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    height: 8vh;
+    cursor: pointer;
+    color: var(--branco);
+    font-size: 2rem;
+}
+  
+.logo img {
+    height: 70px;
+}
+  
+.sla {
+    height: 8vh;
+    width: 40%;
+}
+  
+.buttons {
+    height: 8vh;
+    width: 130%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns {
+  height: 40px;
+  padding: 0px 22px;
+}
+
+#drop {
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--branco);
+  color: var(--cor1);
+  border: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+#drop span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--cor1);
+}
+
+#drop img {
+  border-radius: 100%;
+  width: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  overflow: visible;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  margin-top: 5px;
+  border-radius: 4px;
+  background: var(--branco);
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  z-index: 1;
+}
+
+.dropdown-content button {
+  padding: 7px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  min-width: 100%;
+  color: var(--cor1);
+  font-weight: bold;
+}
+
+.show-dropdown {
+  width: 150px;
+  display: block;
+  transition: all 125ms ease-in !important;
+}
+
+
+.logout{
+  color: var(--cor-erro) !important;
+}
+
+
+
+.buttons .normal {
+  background: transparent;
+  border: none;
+  color: var(--branco);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.buttons .active {
+  border-radius: 5px;
+  border: 1px solid var(--branco);
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons .active:hover {
+  border-radius: 5px;
+  color: var(--branco);
+  background: var(--verde);
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons .post {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  color: var(--cor1);
+  background: var(--branco);
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.post span{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Resposividade */
+
+@media only screen and (max-width: 1100px) {
+  nav{
+    display: none !important;
+  }
+  .navhamburger{
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    min-height: 5vh;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+  }
+  .navhamburger .logomarca{
+    text-align: center;
+    flex: 50%;
+  }
+  .navhamburger .hamburger{
+    padding: 0px 40px 0 0;
+    flex: 50%;
+    text-align: end;
+  }
+  .navhamburger .hamburger button{
+    background: transparent;
+    border: none;
+  }
+  .navhamburger .hamburger button i{
+    color: var(--branco);
+      font-size: 2rem;
+  }
+  .hamburgerdropdown {
+    justify-content: center;
+    display: none;
+    background: var(--branco);
+    width: 160px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    z-index: 1000;
+  }
+  .list-navbtns {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list-navbtns button {
+    font-weight: bold;
+    color: var(--cor1);
+  }
+
+  #loginn {
+    border-radius: 5px;
+    color: var(--branco);
+    background: var(--verde);
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome do Produto - Minha Loja</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .image-carousel-container {
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+
+        .image-carousel {
+            display: inline-block;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        .product-image {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            text-align: center;
+        }
+
+        .product-details h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #e44d26;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            background-color: #e44d26;
+            border: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #d43c1f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="image-carousel-container">
+                    <% for (let i = 0; postagem.fotos?.length && i < postagem.fotos.length; i++) { %>
+                        <div class="image-carousel">
+                            <a href="# <%= postagem.id %> <%= postagem.id %> <%= postagem.id %> <%= postagem.id %>">
+                                <img src="../<%= postagem.fotos[i] %>" class="d-block w-100" alt="Imagem <%= i + 1 %>" onclick="updateProductImage('../<%= postagem.fotos[i] %>')">
+                            </a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-image">
+                    <img id="productImage" src="../<%= postagem.fotos[0] %>" class="d-block mx-auto" alt="Produto">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="product-details">
+                    <h1><%= postagem.info.titulo %></h1>
+                    <p class="product-description"><%= postagem.info.descricao %>.</p>
+                    <p class="product-price">R$99,99</p>
+                    <button class="btn btn-primary buy-button">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateProductImage(imageUrl) {
+            document.getElementById('productImage').src = imageUrl;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

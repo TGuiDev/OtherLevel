@@ -1,0 +1,156 @@
+.carrosel{
+    margin: auto;
+    width: 90%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1700px;
+    width: 100%;
+    position: relative;
+}
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.85);    
+}
+.wrapper i:first-child{
+    z-index: 200;
+    left: -22px;
+}
+.wrapper i:last-child{
+    z-index: 201;
+    right: -22px;
+}
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(((100% )/ 5) - 32px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 40px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+.carousel :where(.card, .img) {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.cardd{
+    background: transparent;
+    border: none;
+    text-decoration: none;
+}
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    /* flex-direction: column; */
+    border-radius: 8px;
+}
+.carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+.card h2{
+    padding: 10px 0px 0px 10px;
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1700px) {
+    .wrapper .carousel{
+        grid-auto-columns: calc(((100%)/ 4) - 32px);
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .wrapper .carousel{
+        grid-auto-columns: calc(((100%)/ 3) - 26px);
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper .carousel{
+        grid-auto-columns: calc(((100%)/ 1));
+    }
+}
+
+.c1{
+    background-image: url(../../lib/carrousel/ia.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.c2{
+    background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_550,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.c3{
+    background-image: url(../../lib/carrousel/webdesign.jpg) !important;
+    background-position: right !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.c4{
+    background-image: url(../../lib/carrousel/socialmedia.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.c5{
+    background-image: url(../../lib/carrousel/ilustracao.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.c6{
+    background-image: url(../../lib/carrousel/3d.png) !important;
+    background-position: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* https://www.behance.net/gallery/171885861/Bakery */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login | Cadastro</title>
+
+  <!-- LINK's -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/cadastro/old_style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login">
+
+    </div>
+    <div class="cadastro">
+      <div id="step1-section">
+        <h2>Etapa 1: Informações básicas</h2>
+        <form id="step1-form" action="/cadastro" method="POST">
+          <label>
+            Nome:
+            <input type="text" id="first-name" name="firstName" required>
+          </label>
+          <br>
+          <label>
+            Sobrenome:
+            <input type="text" id="last-name" name="lastName" required>
+          </label>
+          <br>
+          <label>
+            Username:
+            <input type="text" id="username" name="username" required>
+          </label>
+          <br>
+          <label>
+            E-Mail:
+            <input type="email" id="email" name="email" required>
+          </label>
+          <br>
+          <button id="botao-avancar"><i class="fa-solid fa-arrow-right"></i></button>
+          <label style="color: red;" id="step1ErrorMsg"></label>
+      </div> 
+      <div id="step2-section">
+        <h2>Etapa 2: Informações adicionais</h2>
+          <label>
+            Senha:
+            <input type="password" id="password" name="password" required>
+          </label>
+          <br>
+          <label>
+            Idade:
+            <input type="number" id="age" name="age" required>
+          </label>
+          <br>
+          <label>
+            Telefone:
+            <input type="text" id="phone" name="phone" required>
+          </label>
+          <br>
+          <label>
+            Data de Nascimento:
+            <input type="date" id="date-of-birth" name="dateOfBirth" required>
+          </label>
+          <br>
+          <label>
+            Gênero:
+            <select id="gender" name="gender" required>
+              <option value="Homem">Homem</option>
+              <option value="Mulher">Mulher</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </label>
+          <br>
+          <label>
+            Endereço:
+            <input type="text" id="address" name="address" required>
+          </label>
+          <br>
+          <button id="botao-voltar">Voltar</button>
+          <input type="submit" value="Finalizar">
+          <div id="erro"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/cadastro/old_script.js"></script>
+

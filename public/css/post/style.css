@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2? família=Oswald:wght@200&display=swap');
+
+:root {
+    --navbar: #000;
+    --branco: #ffffff;
+    --preto: #000000;
+    --verde: #19a463;
+    --vinho: #720022;
+    --roxo-vidro: #ececec28;
+    --cor1: #632ed6;
+    --cor2: #1a1f38;
+    --cor3: #eeeeee;
+    --cor4: #424242;
+    --cor5: #34495e;
+    --cor-erro: #ff0035;
+    --corinput: #e2e2e2b4;
+}
+
+input{
+    outline: none;
+}
+
+.postagem{
+    display: flex;
+    flex-direction: column;
+}

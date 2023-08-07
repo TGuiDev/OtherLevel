@@ -1,0 +1,33 @@
+/* @media only screen and (max-width: 1100px) {
+    nav{
+        display: none;
+    }
+    .navhamburger{
+        z-index: 1000;
+        position: absolute;
+        width: 100%;
+        min-height: 5vh;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0px;
+    }
+    .navhamburger .logomarca{
+        text-align: center;
+        flex: 50%;
+    }
+    .navhamburger .hamburger{
+        padding: 0px 40px 0 0;
+        flex: 50%;
+        text-align: end;
+    }
+    .navhamburger .hamburger button{
+        background: transparent;
+        border: none;
+    }
+    .navhamburger .hamburger button i{
+        color: white;
+        font-size: 2rem;
+    }
+} */
