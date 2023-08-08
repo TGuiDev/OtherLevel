@@ -1,3 +1,18 @@
+:root{
+    --navbar: #000;
+    --branco: #ffffff;
+    --preto: #000000;
+    --verde: #19a463;
+    --vinho: #720022;
+    --roxo-vidro: #ececec28;
+    --cor1: #632ed6;
+    --cor2: #1a1f38;
+    --cor3: #eeeeee;
+    --cor4: #424242;
+    --cor5: #34495e;
+    --cor-erro: #ff0035;
+    --corinput: #e2e2e2b4;
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +26,6 @@
     width: 8px;
 }
 ::-webkit-scrollbar-thumb{
-    background: #008cff;
     border-radius: 10px;
 }
 .err{
@@ -41,10 +55,10 @@
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(-45deg, #008cff, #1c99ff);
+    background: radial-gradient(circle, var(--cor1) 0%, var(--cor2) 100%);
     transform: translateY(-45%);
     z-index: 6;
-    transition: 2s ease-in-out;
+    transition: 1.4s ease-in-out;
 }
 .sign__blog{
     position: absolute;
@@ -86,6 +100,7 @@ form{
 }
 .register_content{
     max-width: 350px;
+    height: 45vh;
     overflow: hidden;
 }
 .form_pages{
@@ -94,7 +109,7 @@ form{
     transition: all .5s;
 }
 .form_page{
-    overflow-y: auto;
+    /* overflow-y: auto; */
     padding-top: 5px;
     width: 50%;
     height: max-content;
@@ -102,7 +117,7 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    height: 40vh;
     min-height: 350px;
 }
 
@@ -120,7 +135,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #9500ff;
+    color: var(--cor1);
 }
 .steps_numb{
     position: relative;
@@ -129,7 +144,7 @@ form{
     text-align: center;
     line-height: 35px;
     border-radius: 50%;
-    border: 1px solid #9500ff;
+    border: 1px solid var(--cor1);
     background: #fff;
     color: #333;
     font-size: 18px;
@@ -149,16 +164,16 @@ form{
     height: 2px;
 }
 .steps.active .steps_numb{
-    background: #9500ff;
+    background: var(--cor1);
     color: #fff;
     border-color: #fff;
 }
 .steps.active .steps_numb::after, .steps.active .steps_numb::before{
-    background: #ff2340;
+    background: var(--cor1);
 }
 .form_title{
     font-size: 48px;
-    background: linear-gradient(to right, #ff2340, #9500ff);
+    background: linear-gradient(to right , var(--cor1) 0%, var(--cor2) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -193,7 +208,7 @@ form{
     z-index: 1;
 }
 .form_input.invalid{
-    border-color: #ff2340;
+    border-color: var(--cor-erro);
 }
 .form_label{
     position: absolute;
@@ -210,7 +225,7 @@ form{
     pointer-events: none;
 }
 .form_label i{
-    color: #9500ff;
+    color: var(--cor1);
 }
 .form_email.filled ~ .form_label{
     top: -10px;
@@ -219,12 +234,12 @@ form{
     font-weight: 600;
 }
 .form_email:focus, .form_email.filled{
-    border-color: #9500ff;
+    border-color: var(--cor1);
 }
 .form_input:focus ~ .form_label{
     top: -8px;
     left: 10px;
-    color: #9500ff;
+    color: var(--cor1);
     font-size: 14px;
     font-weight: 600;
 }
@@ -235,14 +250,15 @@ form{
     font-weight: 600;
 }
 .form_input:focus, .form_input:required.form_input:valid{
-    border-color: #9500ff;
+    border-color: var(--cor1);
 }
 .error_email, .error_pass{
     display: none;
     position: absolute;
-    bottom: -20px;
+    right: 5px;
+    bottom: -25px;
     font-weight: 600;
-    color: #ff2340;
+    color: var(--cor-erro);
 }
 .form_textarea{
     max-width: 100%;
@@ -259,7 +275,7 @@ form{
     transform: translateY(-50%);
     padding: 5px;
     border-radius: 50%;
-    color: #9500ff;
+    color: var(--cor1);
     cursor: pointer;
     transition: all .3s;
     z-index: 11;
@@ -294,7 +310,7 @@ form{
     width: 0%;
     height: 8px;
     border-radius: 8px;
-    background: #ff0000;
+    background: var(--cor-erro);
     transition: all .3s ease;
 }
 .password__info{
@@ -314,7 +330,7 @@ form{
     transition: all .3s ease;
 }
 .password__info i{
-    color: #ff0000;
+    color: var(--cor-erro);
 }
 .btn{
     width: 150px;
@@ -323,7 +339,7 @@ form{
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    background: linear-gradient(to right, rgb(255, 35, 64), rgb(149, 0, 255));
+    background: var(--cor1);
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -333,7 +349,7 @@ form{
     position: relative;
 }
 .btn:hover, .btn:focus{
-    background: linear-gradient(to left, rgb(255, 35, 64), rgb(149, 0, 255));
+    background: var(--cor1);
     color: #fff !important;
 }
 .btn:disabled{
@@ -375,7 +391,7 @@ form{
     align-items: center;
     overflow: hidden;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 1.3s ease;
 }
 .form__image{
     position: absolute;
@@ -398,7 +414,7 @@ form{
     font-weight: 500;
 }
 .formUploader__cancel, .formUploader__icon{
-    background: linear-gradient(to right, #ff2340, #9500ff);
+    background: linear-gradient(to right, var(--cor-erro), var(--cor1));
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -409,7 +425,7 @@ form{
     width: 100%;
     text-align: center;
     padding: 5px 0;
-    background: linear-gradient(to right, #ff2340, #9500ff);
+    background: linear-gradient(to right, var(--cor-erro), var(--cor1));
     color: #fff;
     font-weight: 500;
     transform: translateY(-100%);
@@ -421,7 +437,7 @@ form{
     bottom: 0;
     width: 100%;
     padding: 5px 0;
-    background: linear-gradient(to right, #ff2340, #9500ff);
+    background: linear-gradient(to right, var(--cor-erro), var(--cor1));
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -434,10 +450,10 @@ form{
     opacity: 1;
 }
 .form__wrapper:hover{
-    border-color: #9500ff;
+    border-color: var(--cor1);
 }
 .form__wrapper:hover .formUploader__text{
-    color: #9500ff;
+    color: var(--cor1);
 }
 .form__wrapper.active{
     border: none;
@@ -524,7 +540,7 @@ form{
 }
 
 .panel__img{
-    width: 100%;
+    width: 80%;
     padding-top: 25px;
 }
 .panel__title{

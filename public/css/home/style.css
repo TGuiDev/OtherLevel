@@ -25,6 +25,7 @@
   --cor-erro: #ff0035;
   --corinput: #e2e2e2b4;
 }
+
 ::selection{
   color: var(--cor1);
   background-color: var(--branco);

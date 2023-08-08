@@ -32,12 +32,10 @@ const usuario = new mongoose.Schema({
     default: 0
   },
   Seguidores: {
-    type: Number,
-    default: 0
+    type: Array,
   },
   Seguindo: {
-    type: Number,
-    default: 0
+    type: Array,
   },
   Avatar :{
     type: String,

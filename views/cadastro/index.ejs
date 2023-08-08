@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
+    <title>Other Level</title>
     <link rel="stylesheet" href="../css/cadastro/style.css">
-    <link rel="stylesheet" href="../cadastro/css/media.css">
-    <link rel="icon" href="../lib/cadastro/undraw_profile_pic_ic5t.svg">
+    <link rel="stylesheet" href="../css/cadastro/media.css">
+    <link rel="icon" href="../lib/logo/logo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+
 </head>
 <body>
 
@@ -21,10 +26,10 @@
 
                     <form action="/login" method="POST" class="form signin">
 
-                        <div class="profile__img__blog">
-                            <img src="../lib/cadastro/undraw_profile_pic_ic5t.svg" alt="" class="profile">
+                        <div class="profile__img__blog image-container">
+                            <img src="../lib/logo/logograd.png" alt="" class="profile">
                         </div>
-                        <h2 class="form_title">Entrar</h1>
+                        <h2 class="form_title">Login</h1>
                         <div class="input_item">
                             <input name="usernamee" id="usernamee" type="text" class="form_input" oninvalid="this.classList.add('invalid')" required>
                             <label for="usernamee" class="form_label"><i class="fas fa-user"></i> Username</label>
@@ -69,17 +74,17 @@
                                     <div class="input_item">
                                         <input name="email" type="email" class="form_input form_email" oninvalid="this.classList.add('invalid')" required>
                                         <label for="email" class="form_label"><i class="fas fa-envelope"></i> Email</label>
-                                        <p class="error_email">Email is wrong</p>
+                                        <p class="error_email">Email inválido!</p>
                                     </div>
                                     <div class="input_item">
-                                        <input name="phone" type="number" class="form_input"  oninvalid="this.classList.add('invalid')" required>
-                                        <label for="phone" class="form_label"><i class="fas fa-phone"></i> Telefone</label>
+                                        <input name="phone" type="tel" class="form_input" id="phone" oninvalid="this.classList.add('invalid')" required>
+                                        <label for="phone" class="form_label"><i class="fas fa-phone"></i> Celular</label>
                                     </div>
                                     <button type="button" class="btn nextBtn">Próximo</button>
                                 </div>
                                 <div class="form_page page_2 page_password">
                                     <div class="input_item textarea_item">
-                                        <textarea name="bio" maxlength="300" type="text" class="form_input form_textarea"  oninvalid="this.classList.add('invalid')" tabindex="-1" required></textarea>
+                                        <textarea name="bio" maxlength="300" type="text" class="form_input form_textarea" style="padding: 5px 5px;"  oninvalid="this.classList.add('invalid')" tabindex="-1" required></textarea>
                                         <label for="bio" class="form_label"><i class="fas fa-info"></i> Bio</label>
                                     </div>
                                     <div class="input_item password_item">
@@ -137,48 +142,66 @@
                                     </div>
                                     <div class="register_buttons">
                                         <button type="button" class="btn backBtn" tabindex="-1">Voltar</button>
-                                        <button type="submit" class="btn register_button" tabindex="-1" disabled>Enviar</button>
+                                        <button type="submit" class="btn register_button" tabindex="-1" disabled>Concluir</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="invalid_info">Algo deu errado! Por favor, confira:</p>
+                        <p class="invalid_info">Algo deu errado! Tente novamente mais tarde.</p>
                     </form>
 
                 </div>
             </div>
-
             <div class="panels__blog">
-
                 <div class="panel left__panel">
-
                     <div class="content">
 
                         <h3 class="panel__title">É novo aqui?</h3>
-                        <p class="panel__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex fuga minima iure optio repudiandae ipsum?</p>
-                        <button class="button transparent" id="register__btn">Register</button>
-
-                    </div>
+                        <p class="panel__text">Bem-vindo!<br>Explore nossa plataforma e junte-se a nós para acessar recursos exclusivos, conteúdo envolvente e interações significativas.</p>
+                        <button class="button transparent" id="register__btn">Registro</button>
+                    
+                    </div>                    
                     <img src="../lib/cadastro/undraw_Login_re_4vu2.svg" alt="" class="panel__img">
                 </div>
-
                 <div class="panel right__panel">
-
                     <div class="content">
-
-                        <h3 class="panel__title">Already have account</h3>
-                        <p class="panel__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex fuga minima iure optio repudiandae ipsum?</p>
-                        <button class="button transparent" id="signin__btn">Sign in</button>
-
+                        <h3 class="panel__title">Já possui uma conta?</h3>
+                        <p class="panel__text">Bem-vindo de volta!<br>Faça login para continuar desfrutando de conteúdo exclusivo, discussões interessantes e conexões com outros membros.</p>
+                        <button class="button transparent" id="signin__btn">Login</button>
                     </div>
                     <img src="../lib/cadastro/undraw_authentication_fsn5.svg" alt="" class="panel__img">
                 </div>
-
             </div>
-
         </div>
     </main>
     <div id="message" class="err display-none"><%= message %></div> 
     <script src="../js/cadastro/script.js"></script>
 </body>
 </html>
+<script>
+    $(document).ready(function() {
+        $("#phone").inputmask({
+            mask: "(99) 99 9 9999-9999", // Máscara para telefone com até 14 dígitos
+            showMaskOnHover: false, // Não mostrar a máscara ao passar o mouse
+            onBeforePaste: function(pastedValue) {
+                // Remove caracteres não numéricos ao colar
+                return pastedValue.replace(/[^\d]/g, '');
+            }
+        });
+
+        // Atualiza visualmente o número digitado
+        $("#phone").on("input", function() {
+            var phoneNumber = $(this).val().replace(/[^\d]/g, ''); // Remove caracteres não numéricos
+            $(this).val(formatPhoneNumber(phoneNumber)); // Formata e exibe o número
+        });
+
+        // Função para formatar o número de telefone
+        function formatPhoneNumber(number) {
+            if (number.length <= 10) {
+                return number.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+            } else {
+                return number.replace(/(\d{2})(\d{5})(\d{0,4})(\d{0,4})/, "($1) $2-$3$4");
+            }
+        }
+    });
+</script>

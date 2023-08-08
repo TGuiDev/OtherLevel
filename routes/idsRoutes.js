@@ -3,13 +3,16 @@ const router = express.Router();
 const User = require('../schemas/Usuario');
 
 router.get('/', (req, res) => {
-  User.find({}, '_id Email Senha')
+  // const a = User.find({}, '_id Email Senha NomeDeUsuario')
+  // console.log(a)
+  User.find({}, '_id Email Senha NomeDeUsuario')
     .then((users) => {
       const userData = users.map((user) => {
         return {
           id: user._id,
           Email: user.Email,
           Senha: user.Senha,
+          NomeDeUsuario: user.NomeDeUsuario
         }
       }) 
 

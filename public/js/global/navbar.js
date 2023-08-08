@@ -31,17 +31,6 @@ if(logout){
   });
 }
 
-
-// window.addEventListener('scroll', function() {
-//   var navbar = document.getElementById('nav');
-  
-//   if (window.pageYOffset > 1) {
-//     navbar.classList.add('fixed');
-//   } else {
-//     navbar.classList.remove('fixed');
-//   }
-// });
-
 const dropdownBtn = document.getElementById("drop");
 const dropdownContent = document.getElementById("dropdownContent");
 
@@ -67,3 +56,8 @@ if(dropdownBtn){
     dropdown.style.display = 'block';
   }
 });
+
+function toggleNav() {
+  const navHamburger = document.querySelector('.navhamburger');
+  navHamburger.classList.toggle('open');
+}

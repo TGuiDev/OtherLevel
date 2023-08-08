@@ -30,51 +30,51 @@ body {
     --corinput: #e2e2e2b4;
   }
   
-  .postagens {
-    margin: auto;
-    max-width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .postagem {
-    border-radius: calc(100% / 100);
-    overflow: hidden;
-    background: var(--branco);
-  }
-  
-  .postagem .img {
-    border-radius: calc(100% / 100);
-    width: 100%;
-    height: 220px;
-  }
-  
-  .postagem .info {
-    padding: 5px 10px;
-    display: flex;
-  }
-  
- .info-direita {
-    flex: 50%;
-    text-align: right;
-  }
+.postagens {
+  margin: auto;
+  max-width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-  .info-esquerda p{
-    font-family: Arial !important;
-  }
+.postagem {
+  border-radius: calc(100% / 100);
+  overflow: hidden;
+  background: var(--preto);
+}
 
-  .info-esquerda {
-    flex: 50%;
-  }
+.postagem .img {
+  border-radius: calc(100% / 100);
+  width: 100%;
+  height: 220px;
+}
+
+.postagem .info {
+  padding: 5px 10px;
+  display: flex;
+}
+
+.info-direita {
+  flex: 50%;
+  text-align: right;
+}
+
+.info-esquerda p{
+  font-family: Arial !important;
+}
+
+.info-esquerda {
+  flex: 50%;
+}
 
 
-  .postagem-link {
-    color: #000;
-    width: 420px;
-    text-decoration: none !important;
-  }
+.postagem-link {
+  color: #000;
+  width: 420px;
+  text-decoration: none !important;
+}
 
 .card-list {
 	width: 100%;
@@ -94,16 +94,15 @@ text-decoration: none;
 	background-color: transparent;
 	border-radius: 15px;
 	overflow: hidden;
-	padding: 0.55rem;
+	/* padding: 0.55rem; */
 	transition: 0.25s ease-in;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   text-decoration: none;
+  background: var(--roxo-vidro);
 }
 
 .card-image {
-	border-radius: 10px;
   height: 250px;
 	overflow: hidden;
 }
@@ -114,8 +113,12 @@ text-decoration: none;
 
 .card-h {
 	display: flex;
-	align-items: center;
+  padding: 0 10px 15px 10px;
+  align-items: center;
+  justify-content: space-between;
 }
+
+
 
 .card-h h1{
   font-size: 1rem;
@@ -124,26 +127,27 @@ text-decoration: none;
   text-decoration: none;
 }
 
-
-.card-footer {
-	margin-top: 1.25rem;
-	border-top: 1px solid #ddd;
-	padding-top: 1.25rem;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+.card-h{
+  font-size: 1rem;
+  color: var(--preto);
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.card-meta {	
-	display: flex;
-	align-items: center;
-	color: #787878;
-	svg {
-		flex-shrink: 0;
-		width: 1em;
-		height: 1em;
-		margin-right: .25em;
-	}
+.post-autor-info {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.foto-user-post {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 
   

@@ -126,7 +126,7 @@ nav {
   border-radius: 5px;
   gap: 10px;
   cursor: pointer;
-  width: 150px;
+  min-width: 150px;
 }
 
 #drop span {
@@ -153,6 +153,8 @@ nav {
 }
 
 .dropdown-content {
+  position: absolute;
+  right: 0;
   margin-top: 5px;
   border-radius: 4px;
   background: var(--branco);
@@ -275,6 +277,7 @@ nav {
     z-index: 1000;
   }
   .list-navbtns {
+    transition: all 8s ease-in-out;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -293,4 +296,24 @@ nav {
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
   }
+
+  /* .navhamburger {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navhamburger.open {
+    transform: translateX(0);
+  }
+
+  .hamburgerdropdown {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .navhamburger.open .hamburgerdropdown {
+    opacity: 1;
+    transform: translateY(0);
+  } */
 }
