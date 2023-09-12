@@ -66,7 +66,7 @@ app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
 app.use('/erro', errorRoutes);
 app.use('/usuario', usuarioRoutes);
-// app.use('/ids', idsRoutes);
+app.use('/ids', idsRoutes);
 app.use('/perfil', perfilRoutes);
 app.use('/post', postagemRoutes);
 app.use('/postagem', fotoPostRoutes);

@@ -3,8 +3,12 @@ const router = express.Router();
 const User = require('../schemas/Usuario');
 
 router.get('/', (req, res) => {
-  // const a = User.find({}, '_id Email Senha NomeDeUsuario')
-  // console.log(a)
+  // Verifica se o usuário está autenticado e se é um administrador
+  if (!req.isAuthenticated() || !req.user.admin) {
+    // Redireciona para a página inicial ou exibe uma mensagem de erro
+    return res.redirect('/');
+  }
+
   User.find({}, '_id Email Senha NomeDeUsuario')
     .then((users) => {
       const userData = users.map((user) => {
