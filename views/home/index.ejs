@@ -71,24 +71,26 @@
         <% if(post == true) { %>
           <div class="card-list">
           <% postagens.forEach(function(postagem) { %>
-            <a href="/postagem/<%= postagem._id %>">
-              <div class="cardi">
-                <figure class="card-image">
-                  <img src="./<%= postagem.capa %>" alt="Capa de Projeto" />
+            <div class="cardi">
+              <a href="/postagem/<%= postagem._id %>">
+                <figure class="card-image" style="background-image: url('./<%= postagem.capa %>');" >
+                  <!-- <img src="./<%= postagem.capa %>" alt="Capa de Projeto" /> -->
                 </figure>
-                <div class="card-h">
-                  <%= postagem.info.titulo %>
+              </a>
+              <div class="card-h">
+                <%= postagem.info.titulo %>
+                <a href="/usuario/<%= postagem.autor.nome %>">
                   <div class="post-autor-info">
                     <%= postagem.autor.nome %>
                     <img class="foto-user-post" src="<%= postagem.autor.foto %>" alt="">
                   </div>
-                </div>
+                </a>
               </div>
-            </a>
-            <% }) %>
-          </div>
-        <%}%>
-      </div>
+            </div>
+          <% }) %>
+        </div>
+      <%}%>
+    </div>
   </main>
     <script src="./js/home/navbar.js"></script>
     <script src="./js/home/carrousel.js"></script>

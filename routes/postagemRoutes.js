@@ -52,12 +52,64 @@ router.post('/', uploadFields, async (req, res) => {
   const formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   const datinha = formattedDate + ' ' + formattedTime;
 
+  const conteudoCKEditor = req.body.descricao;
+  // console.log('Conteudo: ' + conteudoCKEditor)
   const usuarioLogadoId = req.session.user; 
+
+  const categoriaSelecionada = req.body.cat;
+  const subcategoriaSelecionada = req.body.subcat;
+  const tagsInput = req.body.tags;
+  const tagsArray = tagsInput.split(',');
+  const tagsLimpa = Array.from(new Set(tagsArray.map(tag => tag.trim())));
+
+  // console.log(tagsInput)
+  // console.log(tagsArray)
+  // console.log(tagsLimpa)
+  // console.log(categoriaSelecionada)
+  // console.log(subcategoriaSelecionada)
+
+  const bronzeValor = req.body.bronzeValor;
+  const prataValor = req.body.prataValor;
+  const ouroValor = req.body.ouroValor;
+
+  // Crie objetos para representar os dados de cada plano
+  const bronze = {
+    valor: bronzeValor,
+    opcao: {
+      op1: req.body.bronzeOp1 || 'Não informado.',
+      op2: req.body.bronzeOp2 || 'Não informado.',
+      op3: req.body.bronzeOp3 || 'Não informado.',
+    }
+  };
+
+  const prata = {
+    valor: prataValor,
+    opcao: {
+      op1: req.body.prataOp1 || 'Não informado.',
+      op2: req.body.prataOp2 || 'Não informado.',
+      op3: req.body.prataOp3 || 'Não informado.',
+      op4: req.body.prataOp4 || 'Não informado.',
+      op5: req.body.prataOp5 || 'Não informado.',
+    }
+  };
+
+  const ouro = {
+    valor: ouroValor,
+    opcao: {
+      op1: req.body.ouroOp1 || 'Não informado.',
+      op2: req.body.ouroOp2 || 'Não informado.',
+      op3: req.body.ouroOp3 || 'Não informado.',
+      op4: req.body.ouroOp4 || 'Não informado.',
+      op5: req.body.ouroOp5 || 'Não informado.',
+      op6: req.body.ouroOp6 || 'Não informado.',
+    }
+  };
+
   let usuarioLogadoNome;
   let usuarioLogadoFoto;
 
+  const usuarioLogado = await User.findById(usuarioLogadoId);
   try {
-    const usuarioLogado = await User.findById(usuarioLogadoId);
     if (usuarioLogado) {
       usuarioLogadoNome = usuarioLogado.NomeDeUsuario;
       usuarioLogadoFoto = usuarioLogado.Avatar
@@ -70,6 +122,10 @@ router.post('/', uploadFields, async (req, res) => {
     console.log(error);
   }
 
+  // console.log(usuarioLogado.ProjetosPostados);
+
+  // console.log(req.files['foto'])
+
   const newPost = new Post({
     autor: {
       nome: usuarioLogadoNome, 
@@ -77,13 +133,30 @@ router.post('/', uploadFields, async (req, res) => {
     },
     info: {
       titulo: req.body.titulo,
-      descricao: req.body.conteudo,
+      descricao: conteudoCKEditor || 'Não possui descrição',
       data: datinha,
+      tags: tagsLimpa,
+      categorias: {
+        categoria: categoriaSelecionada,
+        subcategoria: subcategoriaSelecionada,
+      },
     },
     capa: req.files['coverImage'] ? 'uploads/capas/' + req.files['coverImage'][0].filename : '',
     fotos: req.files['foto'].map((file) => 'uploads/images/' + file.filename),
-    tags: req.body.tags,
-  });
+    planos: {
+      bronze,
+      prata,
+      ouro,
+    },
+  })
+  try {
+    usuarioLogado.ProjetosPostados += 1
+    await usuarioLogado.save();
+    // console.log(usuarioLogado.ProjetosPostados);
+  }
+  catch (error) {
+    console.log(error);
+  }
   
 
   // console.log(newPost)

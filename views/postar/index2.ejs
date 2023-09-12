@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/post/style.css">
+    <title>Postar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/global/navbar.css">
+    <%- include('../partials/header'); %>
+</head>
+<body>
+    <%- include('../partials/navbar'); %>
+
+    <div class="container">
+        <div class="paginacao">
+            <ul>
+                <button id="visaogeral" name="visaogeral" class="active">
+                    <i class="bi bi-1-circle-fill"></i>
+                    Visão Geral
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+                <button id="precos" name="precos" class="">
+                    <i class="bi bi-2-circle-fill"></i>
+                    Preços
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+                <button id="desc" name="desc" class="">
+                    <i class="bi bi-3-circle-fill"></i>
+                    Desceição
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+                <button id="galeria" name="galeria" class="">
+                    <i class="bi bi-4-circle-fill"></i>
+                    Galeria
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+                <button id="publicar" name="publicar" class="">
+                    <i class="bi bi-5-circle-fill"></i>
+                    Publicar
+                </button>
+            </ul>
+        </div>
+        <div class="forms">
+            <div class="form-1">
+                <div id="f1" class="f1'">
+                    <div class="texts">
+                        <div class="txt">
+                            <h1>Título de Postagem</h1>
+                            <p>Como vitrine do serviço, <span>o título é a parte mais importante</span> para colocar palavras-chave, que facilitam a pesquisa e atraem clientes.</p>
+                        </div>
+                        <div class="txt">
+                            <h1>Categoria</h1>
+                            <p>Escolha a categoria e sub-categoria que mais se encaixa no seu serviço.</p>
+                        </div>
+                        <div class="txt">
+                            <h1>Tags de Pesquisa</h1>
+                            <p>Escolha palavras que são relevantes em relação ao serviço que você oferece. Use todas as 5 tags para ser encontrado mais facilmente.</p>
+                        </div>
+                    </div>
+                    <div class="caixas">
+                        <div class="box">
+                          <textarea type="text" class="titulo" name="titulo" id="titulo" aria-describedby="titulo" placeholder="Eu vou..."></textarea>
+                          <small id="helpId" class="rught">x/85 máx.</small>
+                        </div>
+                        <div class="box">
+                            <div class="dropopt">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Categoria 1</label>
+                                    <select class="form-select form-select-lg" name="" id="">
+                                        <option selected>Selecionar</option>
+                                        <option value="">New Delhi</option>
+                                        <option value="">Istanbul</option>
+                                        <option value="">Jakarta</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Categoria 2</label>
+                                    <select class="form-select form-select-lg" name="" id="">
+                                        <option selected>Selecionar</option>
+                                        <option value="">New Delhi</option>
+                                        <option value="">Istanbul</option>
+                                        <option value="">Jakarta</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                          <textarea type="text" class="titulo" name="titulo" id="titulo" aria-describedby="titulo" placeholder="Eu vou..."></textarea>
+                          <small id="helpId" class="rught">x/85 máx.</small>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./js/home/navbar.js"></script>

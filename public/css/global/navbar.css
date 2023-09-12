@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2? família=Oswald:wght@200&display=swap');
 
-
 *{
   margin: 0;
   padding: 0;
@@ -47,9 +46,9 @@
 }
 
 
-nav {
+.nav {
     z-index: 1000;
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 5vh;
     background: var(--cor1);
@@ -137,7 +136,8 @@ nav {
 
 #drop img {
   border-radius: 100%;
-  width: 30px;
+  width: 33px;
+  height: 33px;
 }
 
 .dropdown {
@@ -232,12 +232,12 @@ nav {
 /* Resposividade */
 
 @media only screen and (max-width: 1100px) {
-  nav{
+  .nav{
     display: none !important;
   }
   .navhamburger{
     z-index: 1000;
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 5vh;
     background: var(--cor1);
@@ -297,23 +297,4 @@ nav {
     transition: all 0.2s ease-in-out;
   }
 
-  /* .navhamburger {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .navhamburger.open {
-    transform: translateX(0);
-  }
-
-  .hamburgerdropdown {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-
-  .navhamburger.open .hamburgerdropdown {
-    opacity: 1;
-    transform: translateY(0);
-  } */
 }

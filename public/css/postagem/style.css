@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 5px;
 }
 
 .row-1 {
@@ -11,7 +10,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    /* background-color: red; */
 }
 
 .imagens {
@@ -21,11 +19,13 @@
 }
 .gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 95%;
 }
 .gallery img {
-    max-width: 100px;
-    margin: 5px;
+    max-width: 100%;
     cursor: pointer;
 }
 .main-image-container {
@@ -36,15 +36,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
     overflow: hidden;
 }
 
 .main-image {
     max-height: 100%;
 }
-
-
 
 .card-precos {
     display: flex;
@@ -54,8 +51,9 @@
 }
   
 .card {
-    width: 320px;
-    max-width: 320px;
+    width: 400px;
+    height: 50vh;
+    max-width: 400px;
     padding: 10px;
     border-radius: 5px;
     background-color: #fff;
@@ -72,7 +70,6 @@
 .option {
     cursor: pointer;
     padding: 5px 10px;
-    border-radius: 5px;
     background-color: #f5f5f5;
 }
   

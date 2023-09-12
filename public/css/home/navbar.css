@@ -52,7 +52,6 @@ nav {
     position: absolute;
     width: 100%;
     min-height: 5vh;
-    background: transparent;
     display: flex;
     flex-wrap: nowrap !important;
     justify-content: space-around;
@@ -136,7 +135,8 @@ nav {
 
 #drop img {
   border-radius: 100%;
-  width: 30px;
+  width: 33px;
+  height: 33px;
 }
 
 .dropdown {
@@ -175,17 +175,14 @@ nav {
 }
 
 .show-dropdown {
-  width: 150px;
+  min-width: 150px;
   display: block;
   transition: all 125ms ease-in !important;
 }
 
-
 .logout{
   color: var(--cor-erro) !important;
 }
-
-
 
 .buttons .normal {
   background: transparent;
@@ -228,6 +225,9 @@ nav {
   font-size: 1rem;
 }
 
+
+
+
 /* Resposividade */
 
 @media only screen and (max-width: 1100px) {
@@ -239,7 +239,6 @@ nav {
     position: absolute;
     width: 100%;
     min-height: 5vh;
-    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -259,23 +258,23 @@ nav {
     border: none;
   }
   .navhamburger .hamburger button i{
-      color: var(--branco);
+    color: var(--branco);
       font-size: 2rem;
   }
   .hamburgerdropdown {
     justify-content: center;
     display: none;
-    background: var(--roxo-vidro);
-    width: 300px;
+    background: var(--branco);
+    width: 160px;
     padding: 10px 5px;
     border-radius: 10px;
     position: absolute;
-    top: 38px;
-    right: 90px;
+    top: 40px;
+    right: 80px;
     z-index: 1000;
-    backdrop-filter: blur(3px);
   }
   .list-navbtns {
+    transition: all 8s ease-in-out;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -284,7 +283,7 @@ nav {
 
   .list-navbtns button {
     font-weight: bold;
-    color: var(--branco);
+    color: var(--cor1);
   }
 
   #loginn {
@@ -294,4 +293,5 @@ nav {
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
   }
+
 }

@@ -1,0 +1,118 @@
+<div class="tab">
+    <section>
+        <div class="tab3">
+            <h1>Descrição</h1>
+            <p>Descreva brevemente seu serviço</p>
+            <!-- <textarea id="editor"></textarea> -->
+            <!-- <textarea name="editor" id="editor" cols="30" rows="10"></textarea> -->
+            <div class="edit" id="edit" >
+                <div class="cabeca-edit">
+                    <div class="bot-edit">
+                        <ul class="ul-bot">
+                            <li><i class="fa-solid fa-arrow-left"></i></li>
+                            <li><i class="fa-solid fa-arrow-right"></i></li>
+                            <div class="barra"></div>
+                            <li>Arial <i class="fa-solid fa-angle-down"></i></li>
+                            <div class="barra"></div>
+                            <li><span class="bold">B</span></li>
+                            <li><i class="fa-solid fa-italic"></i></li>
+                            <li><i class="fa-solid fa-underline"></i></li>
+                            <li><i class="fa-solid fa-strikethrough"></i></li>
+                            <li><i class="fa-solid fa-quote-left"></i></li>
+                            <div class="barra"></div>
+                            <i class="fa-solid fa-list-ul"></i>
+                            <i class="fa-solid fa-list-ol"></i>
+                            <div class="barra"></div>
+                            <li><i class="fa-regular fa-file-zipper"></i></li>
+                            <li><i class="fa-regular fa-file-pdf"></i></li>
+                            <li><i class="fa-solid fa-file-lines"></i></li>
+                            <li><i class="fa-regular fa-file-image"></i></li>
+                            <li><i class="fa-solid fa-link"></i></li>
+                            <div class="barra"></div>
+                            <li><i class="fa-solid fa-text-height"></i><i class="fa-solid fa-angle-down"></i></li>
+                            <li><i class="fa-solid fa-text-width"></i><i class="fa-solid fa-angle-down"></i></li>
+                            <li><i class="fa-solid fa-t"></i></li>
+                            <li><i class="fa-solid fa-t bg-bblack"></i></li>
+                            <li><i class="fa-solid fa-text-slash"></i></li>
+                            <div class="barra"></div>
+                            <li><i class="fa-solid fa-table"></i></li>
+                            <li><i class="fa-solid fa-table-cells-large"></i></li>
+                            <li><i class="fa-solid fa-table-cells"></i></li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <textarea class="no-resize descricao" id="descricao" name="descricao" rows="5" cols="41" placeholder="Digite a descrição de seu projeto/produto aqui..." maxlength="2000"></textarea>
+            </div>
+            <small id="descCounter" class="rught">0/2000 máx.</small>
+        </div>
+    </section>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const descricao = document.getElementById("descricao");
+        const descCounter = document.getElementById("descCounter");
+
+        descricao.addEventListener("input", function () {
+            descCounter.textContent = `${descricao.value.length}/2000 máx`;
+        });
+    });
+
+    // ClassicEditor.create(document.querySelector('#descricao')).catch(error => {
+    //     console.error(error);
+    // });
+
+
+</script>
+<style>
+    .ck.ck-editor {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .ck-editor {
+        justify-content: center;
+        width: 98% !important;
+    }
+
+    .ck-editor__editable_inline {
+        min-height: 45vh !important;
+        max-height: 45vh !important;
+    }
+
+    .ck-powered-by-balloon {
+        display: none !important;
+    }
+
+    .ck-dropdown {
+        display: none !important;
+    }
+
+    .ck-heading-dropdown {
+        display: flex !important;
+    }
+
+    .ck-file-dialog-button {
+        display: none;
+    }
+
+    .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+    .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable,
+    .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+</style>

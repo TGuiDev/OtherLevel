@@ -10,7 +10,8 @@ const fs = require('fs');
 // Configuração do multer para upload de imagens
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const folderPath = path.join(__dirname, '../public/uploads/avatar'); // Substitua 'pasta_de_upload' pelo nome da pasta que deseja criar e salvar as imagens
+    const folderPath = path.join(__dirname, '../public/uploads/avatar'); 
+    // Substitua 'pasta_de_upload' pelo nome da pasta que deseja criar e salvar as imagens
 
     // Verifica se a pasta de destino existe, senão cria ela
     if (!fs.existsSync(folderPath)) {
@@ -42,10 +43,10 @@ router.post('/', upload.single('avatar'), (req, res) => {
     NomeCompleto: req.body.name,
     NomeDeUsuario: req.body.username,
     Email: req.body.email,
-    Telefone: req.body.telefone,
+    Telefone: req.body.phone,
     Senha: req.body.password,
     Bio: req.body.bio,
-    Avatar: req.file ? 'uploads/avatar/' + req.file.filename : '', // Salva o nome do arquivo no campo Avatar
+    Avatar: req.file ? '../uploads/avatar/' + req.file.filename : '', // Salva o nome do arquivo no campo Avatar
   });
 
   newUser.save()

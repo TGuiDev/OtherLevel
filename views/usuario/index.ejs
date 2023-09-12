@@ -1,29 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= user.NomeDeUsuario %></title>
-  <link rel="stylesheet" href="../css/usuario/stylee.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Other Level</title> 
+
+    <!-- LINK's -->
+    <link rel="stylesheet" href="../css/global/navbar.css">
+    <link rel="stylesheet" href="../css/perfil/style.css">
+    <%- include('../partials/header'); %>
+
 </head>
 <body>
-  <div class="panel">
-    <h1>Informações do Usuário</h1>
-    <div class="user-info">
-      <img src="../<%= user.Avatar %>" alt="UserAvatar">
-      <p><strong>Token:</strong> <%= user.token %></p>
-      <p><strong>ID:</strong> <%= user._id %></p>
-      <p><strong>Nome:</strong> <%= user.NomeCompleto %></p>
-      <p><strong>Nome de Usuário:</strong> <%= user.NomeDeUsuario %></p>
-      <p><strong>Email:</strong> <%= user.Email %></p>
-      <p><strong>Senha:</strong> <%= user.Senha %></p>
-      <p><strong>Telefone:</strong> <%= user.Telefone %></p>
-      <p><strong>Contagem de Projetos Postados:</strong> <%= user. ProjetosPostados%></p>
-      <p><strong>Quantidade de Seguidores:</strong> <%= user.Seguidores %></p>
-      <p><strong>Quantidade de Pessoas que Segue:</strong> <%= user.Seguindo %></p>
-      <pre><strong>Sobre Mim:</strong> <%= user.Bio %></pre>
+  <%- include('../partials/navbar'); %>
+  <div class="perfil">
+    <div class="flex">
+      <div class="col1">
+        <div class="informacoes">
+          <div class="info-user">
+            <img src="<%= user.Avatar %>" alt="">
+            <span class="nome-completo"><%= user.NomeCompleto %></span>
+            <span class="nome-user">@<%= user.NomeDeUsuario %></span>
+          </div>
+          <div class="botao">
+              <button type="button" name="" id="" class="btn seguir"><i class="fa-solid fa-plus"></i> Seguir</button>
+          </div>
+          <div class="redes">
+            <span class="contatos">Contatos</span>
+            <ul>
+                <li><a href="<%= user.Links.Linkedin %>">   <i class="fa-brands faanim fa-linkedin"></i>   </a></li>
+                <li><a href="<%= user.Links.Insta %>">      <i class="fa-brands faanim fa-instagram"></i>  </a></li>
+                <li><a href="<%= user.Links.Behance %>">    <i class="fa-brands faanim fa-behance"></i>    </a></li>
+                <li><a href="<%= user.Links.Dribble %>">    <i class="fa-brands faanim fa-dribbble"></i>   </a></li>
+                <li><a href="<%= user.Links.Face %>">       <i class="fa-brands faanim fa-facebook"></i>   </a></li>
+                <li><a href="<%= user.Links.Vimeo %>">      <i class="fa-brands faanim fa-vimeo"></i>      </a></li>
+                <li><a href="<%= user.Links.GitHub %>">     <i class="fa-brands faanim fa-github"></i>     </a></li>
+                <li><a href="mailto:<%= user.Email %>">     <i class="fa-solid faanim fa-envelope"></i>    </a></li>
+                <!-- <% if(user.Redes.Linkedin == 'Não Informado') { %>
+                  <% } else { %>
+                    <li><a href="<%= user.Links.Linkedin %>"><i class="fa-brands fa-linkedin"></i> <%= user.Redes.Linkedin %></a></li>
+                <% } %>
+                <% if(user.Redes.Insta == 'Não Informado') { %>
+                <% } else { %>
+                        <li><a href="<%= user.Links.Insta %>">  <i class="fa-brands fa-instagram"></i> <%= user.Redes.Insta %></a></li>
+                <% } %>
+                <% if(user.Redes.Behance == 'Não Informado') { %>
+                <% } else { %>
+                  <li><a href="<%= user.Links.Behance %>"><i class="fa-brands fa-behance"></i>   <%= user.Redes.Behance %></a></li>
+                <% } %>
+                <% if(user.Redes.Dribble == 'Não Informado') { %>
+                <% } else { %>
+                  <li><a href="<%= user.Links.Dribble %>"><i class="fa-brands fa-dribbble"></i>  <%= user.Redes.Dribble %></a></li>
+                <% } %>
+                <% if(user.Redes.Face == 'Não Informado') { %>
+                <% } else { %>
+                  <li><a href="<%= user.Links.Face %>">   <i class="fa-brands fa-facebook"></i>  <%= user.Redes.Face %></a></li>
+                <% } %>
+                <% if(user.Redes.Linkedin == 'Não Informado') { %>
+                <% } else { %>
+                  <li><a href="<%= user.Links.Vimeo %>">  <i class="fa-brands fa-vimeo"></i>     <%= user.Redes.Vimeo %></a></li>
+                <% } %>
+                <% if(user.Redes.Linkedin == 'Não Informado') { %>
+                <% } else { %>
+                  <li><a href="<%= user.Links.GitHub %>"> <i class="fa-brands fa-github"></i>    <%= user.Redes.GitHub %></a></li>
+                <% } %> -->
+            </ul>
+          </div>
+          <div class="outros">
+            <div class="info-posts">
+              <div class="box">
+                <span class="tit">Postagens: </span>
+                <span class="qtd-post"><%= user.ProjetosPostados %></span>
+              </div>
+              <div class="box">
+                <span class="tit">Seguindo:</span>
+                <span><%= user.Seguindo.length %></span>
+              </div>
+              <div class="box">
+                <span class="tit">Seguidores:</span>
+                <span><%= user.Seguidores.length %></span>
+              </div>
+            </div>
+            <div class="sobremim">
+              <span class="tit">Sobre mim</span>
+              <span class="bio"><%= user.Bio %></span>
+            </div>
+            <div class="habilidades">
+              <span class="tit">Habilidades</span>
+              <% if (user.Habilidades >= 1 ) { %>
+              <ul>
+                <li><%= user.Habilidades %></li>
+              </ul>
+              <% } else { %>
+                <ul>
+                  
+                  <li class="add-mais">Vazio</li>
+                </ul>
+              <% } %>
+            </div>
+            <div class="educacao">
+              <span class="tit">Educação</span>
+              <% if (user.Educacao >= 1 ) { %>
+                <ul>
+                  <li><%= user.Educaco %></li>
+                </ul>
+                <% } else { %>
+                  <ul>
+                    <li class="add-mais">Vazio</li>
+                  </ul>
+                <% } %>
+            </div>
+            <div class="certificacao">
+              <span class="tit">Certificação</span>
+              <% if (user.Certificacao >= 1 ) { %>
+                <ul>
+                  <li><%= user.Certificacao %></li>
+                </ul>
+                <% } else { %>
+                  <ul>
+                    <li class="add-mais">Vazio</li>
+                  </ul>
+                <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col2">
+        <div class="postagens">
+          <% if (postagens.length === 0) { %>
+            <p>Não possui postagens.</p>
+          <% } else { %>
+              <% postagens.forEach(postagem => { %>
+                <a href="/postagem/<%= postagem._id %>">
+                  <div class="cardi">
+                    <a href="/postagem/<%= postagem._id %>">
+                      <figure class="card-image" style="background-image: url('../../<%= postagem.capa %>');" >
+                      </figure>
+                    </a>
+                    <div class="card-h">
+                      <%= postagem.info.titulo %>
+                    </div>
+                  </div>
+                </a>
+              <% }); %>
+          <% } %>
+        </div>
+      </div>
     </div>
   </div>
 </body>
 </html>
+<script src="../js/home/navbar.js"></script>

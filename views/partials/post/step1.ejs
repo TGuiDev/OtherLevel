@@ -1,0 +1,60 @@
+<div class="form-1">
+  <div class="tab">
+    <div id="f1" class="f1">
+      <div class="caixas">
+        <div class="box">
+          <div class="txt">
+            <h1>Título de Postagem</h1>
+            <p>Como vitrine do serviço, <span>o título é a parte mais importante</span> para colocar palavras-chave, que
+              facilitam a pesquisa e atraem clientes.</p>
+          </div>
+          <div class="boxes">
+            <input maxlength="85" type="text" class="titulo verify" name="titulo" id="titulo" aria-describedby="titulo"
+              placeholder="Titulo"></input>
+            <small id="tituloCounter" class="rught">0/85 máx.</small>
+          </div>
+        </div>
+        <div class="box">
+          <div class="txt">
+            <h1>Categoria</h1>
+            <p>Escolha a categoria e sub-categoria que mais se encaixa no seu serviço.</p>
+          </div>
+          <div class="dropopt">
+            <div class="mb-3">
+              <label for="" class="form-label">Categoria</label>
+              <select class="verify form-select form-select-lg" name="cat" id="cat">
+                <option selected>Nenhuma</option>
+                <option value="Programação">Programação</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Social Midia">Social Midia</option>
+                <option value="Design de Produto">Design de Produto</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Sub-Categoria</label>
+              <select class="verify form-select form-select-lg" name="subcat" id="subcat">
+                <option selected>Nenhuma</option>
+                <option value="Programação"><span>Programação</span></option>
+                <option value="Web Design">Web Design</option>
+                <option value="Social Midia">Social Midia</option>
+                <option value="Design de Produto">Design de Produto</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="txt">
+            <h1>Tags de Pesquisa</h1>
+            <p>Escolha palavras que são relevantes em relação ao serviço que você oferece. Use todas as 5 tags para ser
+              encontrado mais facilmente.</p>
+          </div>
+          <div class="boxes">
+            <input maxlength="80" type="text" class="titulo verify" name="tags" id="tag" aria-describedby="tag"
+              placeholder="Máximo de 5 tags" oninput="limitWords(this, 5)"></input>
+            <small id="tagCounter" class="rught">0/5 Palavras.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

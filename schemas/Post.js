@@ -20,6 +20,17 @@ const postagem = new mongoose.Schema({
     data: {
       type: String,
     },
+    tags: {
+      type: Array
+    },
+    categorias: {
+      categoria: {
+        type: String,
+      },
+      subcategoria: {
+        type: String
+      }
+    }
   },
   capa: {
     type: String,
@@ -27,9 +38,88 @@ const postagem = new mongoose.Schema({
   fotos: {
     type: Array
   },
-  tags: {
-    type: Array
-  }
+  planos: {
+    bronze: {
+      valor: {
+        type: String,
+        default: 'R$ 00,00'
+      },
+      opcao: {
+        op1: {
+          type: String,
+          default: `Não informado.`
+        },
+        op2: {
+          type: String,
+          default: `Não informado.`
+        },
+        op3: {
+          type: String,
+          default: `Não informado.`
+        },
+      }
+    },
+    prata: {
+      valor: {
+        type: String,
+        default: 'R$ 00,00'
+      },
+      opcao: {
+        op1: {
+          type: String,
+          default: `Não informado.`
+        },
+        op2: {
+          type: String,
+          default: `Não informado.`
+        },
+        op3: {
+          type: String,
+          default: `Não informado.`
+        },
+        op4: {
+          type: String,
+          default: `Não informado.`
+        },
+        op5: {
+          type: String,
+          default: `Não informado.`
+        },
+      }
+    },
+    ouro: {
+      valor: {
+        type: String,
+        default: 'R$ 00,00'
+      },
+      opcao: {
+        op1: {
+          type: String,
+          default: `Não informado.`
+        },
+        op2: {
+          type: String,
+          default: `Não informado.`
+        },
+        op3: {
+          type: String,
+          default: `Não informado.`
+        },
+        op4: {
+          type: String,
+          default: `Não informado.`
+        },
+        op5: {
+          type: String,
+          default: `Não informado.`
+        },
+        op6: {
+          type: String,
+          default: `Não informado.`
+        },
+      }
+    }
+  },
 });
 
 // Criando o modelo da postagem

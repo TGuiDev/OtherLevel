@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Postagem</title>
-    <link rel="stylesheet" href="../css/post/style.css">
-</head>
-<body>
-    <main>
-        <h1>Nova Postagem</h1>
-        <form action="/post" method="POST" enctype="multipart/form-data">
-            <div class="postagem">
-                <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" required>
+<meta charset="UTF-8">
+<title>Nova Postagem De <%= currentUser.NomeDeUsuario %> </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="../css/post/teste.css">
+<link rel="stylesheet" href="../css/global/navbar.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<%- include('../partials/header'); %>
 
-                <label for="conteudo">Conteúdo:</label>
-                <textarea id="conteudo" name="conteudo" required></textarea>
+  <body>
+    <%- include('../partials/navbar'); %>
 
-                <label for="foto">Fotos:</label>
-                <input type="file" id="foto" name="foto" accept="image/*" multiple>
 
-                <label for="capa">Selecionar Capa:</label>
-                <input type="file" id="coverImage" name="coverImage" accept="image/*">
+      <form action="/post" method="POST" enctype="multipart/form-data" id="regForm">
+        <div class="dots">
+          <div class="paginacao">
+            <ul>
+              <div id="visaogeral" name="visaogeral" class="step active">
+                <i class="bi bi-1-circle-fill"></i>
+                Visão Geral
+              </div>
+              <i class="fa-solid fa-circle"></i>
+              <div id="precos" name="precos" class="step">
+                <i class="bi bi-2-circle-fill"></i>
+                Preços
+              </div>
+              <i class="fa-solid fa-circle"></i>
+              <div id="desc" name="desc" class="step">
+                <i class="bi bi-3-circle-fill"></i>
+                Descrição
+              </div>
+              <i class="fa-solid fa-circle"></i>
+              <div id="galeria" name="galeria" class="step">
+                <i class="bi bi-4-circle-fill"></i>
+                Galeria
+              </div>
+              <i class="fa-solid fa-circle"></i>
+              <div id="publicar" name="publicar" class="step">
+                <i class="bi bi-5-circle-fill"></i>
+                Publicar
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="forms">
+          <%- include('../partials/post/step1.ejs'); %>
+          <%- include('../partials/post/step2.ejs'); %>
+          <%- include('../partials/post/step3.ejs'); %>
+          <%- include('../partials/post/step4.ejs'); %>
+          <%- include('../partials/post/step5.ejs'); %>
+        </div>
 
-                <button type="submit">Cadastrar</button>
-            </div>
-        </form>
-    </main>
-</body>
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Voltar</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Continuar</button>
+          </div>
+        </div>
+      </form>
+  </body>
+
 </html>
+<script src="../js/post/teste.js"></script>
+<script src="../js/home/navbar.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script>
+  ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+</script>

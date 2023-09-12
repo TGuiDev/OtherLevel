@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/postagem/style.css">
+    <title><%= postagem.titulo %></title>
+</head>
+<body>
+  <main>
+    <div class="row-1">
+      <div class="imagens">
+        <div class="gallery" id="gallery">
+          <% for (let i = 0; postagem.fotos?.length && i < postagem.fotos.length; i++) { %>
+              <img src="../<%= postagem.fotos[i] %>" alt="Imagem <%= i + 1 %>" class=" w-100">
+          <% } %>
+        </div>
+        <div class="main-image-container">
+          <img src="../<%= postagem.fotos && postagem.fotos.length > 0 ? postagem.fotos[0] : '' %>" alt="Imagem Maior" class="main-image" id="mainImage">
+        </div>
+      </div>
+      <div class="card-precos">
+        <div class="card" id="card1">
+          <div class="options">
+            <span class="option" id="option1">Option 1</span>
+            <span class="option" id="option2">Option 2</span>
+            <span class="option" id="option3">Option 3</span>
+          </div>
+          <h1 class="card-preco" id="cardPreco1">
+            Card Preço 1
+          </h1>
+          <p class="card-info" id="cardInfo1">
+            Benefícios: Benefício A<br>
+            Dias: Segunda, Quarta, Sexta<br>
+            Outros: Alguma outra informação longa que deve ser quebrada automaticamente para caber dentro do card
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+<script src="../js/postagem/script.js"></script>

@@ -37,9 +37,72 @@ const usuario = new mongoose.Schema({
   Seguindo: {
     type: Array,
   },
-  Avatar :{
+  Avatar: {
     type: String,
     default: "https://imgur.com/XwHOhQj.png",
+  },
+  Redes: {
+    Linkedin: {
+      default: "Não Informado",
+      type: String,
+    },
+    Insta: {
+      default: "Não Informado",
+      type: String
+    },
+    Behance: {
+      default: "Não Informado",
+      type: String
+    },
+    Dribble: {
+      default: "Não Informado",
+      type: String
+    },
+    Face: {
+      default: "Não Informado",
+      type: String
+    },
+    Vimeo: {
+      default: "Não Informado",
+      type: String
+    },
+    GitHub: {
+      default: "Não Informado",
+      type: String
+    }, 
+  },
+  Links: {
+    Linkedin: {
+      default: "#",
+      type: String,
+    },
+    Insta: {
+      default: "#",
+      type: String
+    },
+    Behance: {
+      default: "#",
+      type: String
+    },
+    Dribble: {
+      default: "#",
+      type: String
+    },
+    Face: {
+      default: "#",
+      type: String
+    },
+    Vimeo: {
+      default: "#",
+      type: String
+    },
+    GitHub: {
+      default: "#",
+      type: String
+    },
+  },
+  Tags: {
+    type: Array,
   }
 });
 

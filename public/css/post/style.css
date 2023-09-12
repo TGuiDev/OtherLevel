@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2? família=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 :root {
     --navbar: #000;
@@ -17,11 +18,111 @@
     --corinput: #e2e2e2b4;
 }
 
-input{
-    outline: none;
-}
-
-.postagem{
+.container {
+    margin-top: 7vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 70vh;
+}
+
+.container ul {
+    display: flex;
+    gap: 15px;
+}
+
+.container ul button {
+    font-size: 1vw;
+    background: transparent;
+    border: none;
+    color: var(--cor4);
+}
+.container ul .active {
+    color: var(--cor1);
+}
+
+
+
+.forms {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#f1 {
+    overflow: hidden;
+    background: var(--branco);
+    width: 90%;
+    height: 60vh;
+    margin: 0 auto !important; 
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(233, 233, 233, 0.575);
+    display: flex;
+}
+
+.texts {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+    background: rgb(253, 253, 253);
+    justify-content: space-evenly;
+}
+
+.txt h1 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: var(--cor1);
+}
+.txt p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: gray;
+}
+.txt span {
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+.caixas {
+    flex: 70%;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    width: 90%;
+}
+
+.titulo {
+    padding: 0px 20px;
+    width: 100% !important;
+    min-height: 7vh !important;
+    display: flex;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 100px rgba(233, 233, 233, 0.575);
+}
+textarea:focus, input:focus {
+    border: 0 none;
+    outline: 0;
+}
+
+.dropopt {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.dropopt .mb-3 select {
+    width: 250px;
 }

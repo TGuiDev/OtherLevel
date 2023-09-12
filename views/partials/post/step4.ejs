@@ -1,0 +1,125 @@
+<div class="form-4">
+    <div class="tab tab4">
+
+        <section>
+            <div class="preview-container">
+                <h1>Vídeo <span>(Apenas um)</span></h1>
+                <div class="dflex">
+                    <label for="coverVideo" class="custom-input">
+                        <span class="upload-icon"><i class="fa-solid fa-video"></i></span>
+                        <input type="file" id="coverVideo" accept="video/*" class="upload-input">
+                    </label>
+                    <div class="spans">
+                        <span class="textspan1">Capiture a atenção dos clientes com um vídeo do seu serviço.</span>
+                        <span class="textspan2">Escolha um vídeo mais curto que 75 segundos e menor que 50MB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-container">
+                <h1>Capa</h1>
+                <div class="dflex">
+                  <label for="coverImage" class="custom-input">
+                    <span class="upload-icon"><i class="fa-regular fa-image"></i></span>
+                    <input type="file" id="coverImage" name="coverImage" accept="image/*" class="upload-input">
+                  </label>
+                  <div class="spans">
+                    <span class="textspan1">Lembre-se, a capa é a primeira a ser vista!</span>
+                  </div>
+                </div>
+                <div class="preview-image-box" id="coverPreview"></div>
+            </div>
+                
+            <div class="preview-container">
+                <h1>Imagens <span>(Máx 3)</span></h1>
+                <div class="dflex">
+                  <label for="foto" class="custom-input">
+                    <span class="upload-icon"><i class="fa-regular fa-images"></i></span>
+                    <input type="file" id="foto" name="foto" accept="image/*" class="upload-input" multiple>
+                  </label>
+                  <div class="spans">
+                    <span class="textspan1">A ordem inserida será a ordem da postagem!</span>
+                  </div>
+                </div>
+                <div class="alerta" style="display: none;"></div>
+                <div class="preview-image-box" id="postImagePreview"></div>
+            </div>
+
+            <div class="preview-container">
+              <h1>Documentos</h1>
+                <div class="dflex">
+                  <label for="postFiles" class="custom-input">
+                    <span class="upload-icon"><i class="fa-regular fa-file-lines"></i></span>
+                    <input type="file" id="postFiles" accept="files" class="upload-input" multiple>
+                  </label>
+                  <div class="spans">
+                    <span class="textspan1">Seja notado pelos clientes com exemplos visuais do seu serviço.</span>
+                    <span class="textspan2">(PDF apneas)</span>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+<script>
+    const coverImageInput = document.getElementById('coverImage');
+    const postImagesInput = document.getElementById('foto');
+    const coverPreview = document.getElementById('coverPreview');
+    const postImagePreview = document.getElementById('postImagePreview');
+    const imageGallery = document.getElementById('imageGallery');
+    let currentCoverImage = null;
+
+    coverImageInput.addEventListener('change', handleCoverImageSelect);
+    postImagesInput.addEventListener('change', handlePostImagesSelect);
+
+    function handleCoverImageSelect(event) {
+      const newCoverImage = event.target.files[0];
+
+      if (currentCoverImage) {
+        currentCoverImage.remove();
+      }
+
+      const coverPreviewDiv = document.createElement('div');
+      coverPreviewDiv.style.backgroundImage = `url('${URL.createObjectURL(newCoverImage)}')`;
+      coverPreviewDiv.classList.add('preview-image');
+
+      coverPreview.innerHTML = '';
+      coverPreview.appendChild(coverPreviewDiv);
+
+      currentCoverImage = coverPreviewDiv;
+    }
+
+    function handlePostImagesSelect(event) {
+      const selectedImages = event.target.files;
+      const maxImages = 5; // Defina o máximo de imagens permitidas
+
+      if (selectedImages.length > maxImages) {
+        showMaxImagesAlert(maxImages);
+        postImagesInput.value = ''; // Limpa a seleção de imagens
+        return;
+      }
+
+      postImagePreview.innerHTML = '';
+
+      for (let i = 0; i < selectedImages.length; i++) {
+        const previewDiv = document.createElement('div');
+        previewDiv.style.backgroundImage = `url('${URL.createObjectURL(selectedImages[i])}')`;
+        previewDiv.classList.add('preview-image');
+
+        postImagePreview.appendChild(previewDiv);
+      }
+    }
+
+    function showMaxImagesAlert(maxImages) {
+      const alertMessage = `Você só pode selecionar no máximo ${maxImages} imagens.`;
+      const existingAlertBox = document.querySelector('.alerta');
+
+      existingAlertBox.textContent = alertMessage;
+      existingAlertBox.style.display = 'block';
+
+      setTimeout(() => {
+          existingAlertBox.style.display = 'none';
+      }, 5000); // Remove o alerta após 3 segundos
+    }
+</script>

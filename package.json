@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "postcss styles.css -o public/css/tailwind.css"
+    "build:css": "postcss styles.css -o public/css/tailwind.css",
+    "start": "nodemon index.js",
+    "dev": "browser-sync start --config bs-config.js --no-open"
   },
   "author": "Gui e Mily",
   "license": "ISC",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^39.0.1",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
@@ -25,12 +28,17 @@
     "mongodb": "^5.5.0",
     "mongoose": "^7.2.0",
     "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.1",
     "passport": "^0.6.0",
     "path": "^0.12.7",
     "postcss": "^8.4.27",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
+    "social-links": "^1.13.8",
     "tailwindcss": "^3.3.3",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
   }
 }

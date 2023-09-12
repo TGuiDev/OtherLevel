@@ -4,17 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/postagem/page.css">
-    <link rel="stylesheet" href="../css/postagem/page.css">
-    <link rel="stylesheet" href="../css/global/navbar.css">
+    <link rel="stylesheet" href="../css/postagem/style1.css">
     <title><%= postagem.info.titulo %></title>
-
-    <%- include('../partials/header'); %>
+    <link rel="shortcut icon" href="../<%= postagem.capa %>" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <%- include('../partials/navbar'); %>
-
+  <main>
+    <div class="row-1">
+      <div class="imagens">
+        <div class="gallery" id="gallery">
+          <% for (let i = 0; postagem.fotos?.length && i < postagem.fotos.length; i++) { %>
+              <img src="../<%= postagem.fotos[i] %>" alt="Imagem <%= i + 1 %>" class=" w-100">
+          <% } %>
+        </div>
+        <div class="main-image-container">
+          <img src="../<%= postagem.fotos && postagem.fotos.length > 0 ? postagem.fotos[postagem.fotos.length - 1] : '' %>" alt="Imagem Maior" class="main-image" id="mainImage">
+        </div>
+      </div>
+      <div class="card-precos">
+        <div class="card" id="card1">
+          <div class="options">
+            <span class="option" id="option1">Option 1</span>
+            <span class="option" id="option2">Option 2</span>
+            <span class="option" id="option3">Option 3</span>
+          </div>
+          <h1 class="card-preco" id="cardPreco1">
+            Card Preço 1
+          </h1>
+          <p class="card-info" id="cardInfo1">
+            Benefícios: Benefício A<br>
+            Dias: Segunda, Quarta, Sexta<br>
+            Outros: Alguma outra informação longa que deve ser quebrada automaticamente para caber dentro do card
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/home/navbar.js"></script>
 </body>
 </html>
-<script src="../js/postagem/page.js"></script>
-<script src="../js/home/navbar.js"></script>
+<script src="../js/postagem/script1.js"></script>
+
+<script>
+
+const card1 = document.getElementById('card1');
+const option1 = document.getElementById('option1');
+const option2 = document.getElementById('option2');
+const option3 = document.getElementById('option3');
+const cardInfo1 = document.getElementById('cardInfo1');
+
+// Sample content for the card options (you can change this as needed)
+const option1Content = {
+  preco: "<%= postagem.planos.bronze.valor %>",
+  outros: '<%= postagem.planos.bronze.valor %>',
+};
+
+const option2Content = {
+  preco: '<%= postagem.planos.prata.valor %>',
+  outros: '<%= postagem.planos.prata.valor %>',
+};
+
+const option3Content = {
+  preco: '<%= postagem.planos.ouro.valor %>',
+  outros: '<%= postagem.planos.ouro.valor %>',
+};
+
+// Set initial content
+updateCardContent(option1Content);
+
+// Click event handlers
+option1.addEventListener('click', () => {
+  // Update content when clicked
+  updateCardContent(option1Content);
+});
+
+option2.addEventListener('click', () => {
+  // Update content when clicked
+  updateCardContent(option2Content);
+});
+
+option3.addEventListener('click', () => {
+  // Update content when clicked
+  updateCardContent(option3Content);
+});
+
+// Function to update card content
+function updateCardContent(content) {
+  // Hide all card infos initially
+  cardInfo1.style.display = 'none';
+
+  // Update the content based on the selected option
+  cardPreco1.textContent = content.preco;
+  cardInfo1.innerHTML = `Outros: ${content.outros}`;
+  cardInfo1.style.display = 'block';
+}
+
+
+</script>

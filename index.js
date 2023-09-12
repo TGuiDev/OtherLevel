@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 require('colors');
 const express = require('express');
 const session = require('express-session');
@@ -12,8 +12,7 @@ const app = express();
 
 // Configurações do Express
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));app.set('views', path.join(__dirname, 'views'));
 
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
@@ -65,24 +64,18 @@ app.use('/', indexRoutes);
 app.use('/cadastro', cadastroRoutes);
 app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
-app.use('/error', errorRoutes);
+app.use('/erro', errorRoutes);
 app.use('/usuario', usuarioRoutes);
-app.use('/ids', idsRoutes);
+// app.use('/ids', idsRoutes);
 app.use('/perfil', perfilRoutes);
 app.use('/post', postagemRoutes);
 app.use('/postagem', fotoPostRoutes);
 
 app.use((req, res) => {
-  res.redirect('/error');
+  res.redirect('/erro');
 });
 
 const porta = process.env.PORT || 1010;
 app.listen(porta, () => {
   console.log(`🤩 | Servidor  |`.white + ` http://localhost:${porta}`.rainbow);
 });
-
-
-
-
-
-
