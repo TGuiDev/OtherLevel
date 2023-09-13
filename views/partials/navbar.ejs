@@ -6,15 +6,15 @@
         </button>
     </div>
     <div class="buttons" id="buttons" >
+        <button class="normal" id="home1">Página inicial</button>
         <button class="normal" id="criadores">Criadores</button>
-        <button class="normal" id="projetos">Projetos</button>
         <% if (currentUser) { %>
             <button class="btns post" id="post">
             <span class="list-item-text nome post"><i class="fa-solid fa-plus"></i> Post</span>
             </button>
             <div class="dropdown">
             <button class="dropdown-btn btns" id="drop">
-                <img class="img" src="../<%= currentUser.Avatar %>" alt="">
+                <img class="img" src="<%= currentUser.Avatar %>" alt="">
                 <%= currentUser.NomeDeUsuario %> 
             </button>
             <div class="dropdown-content" id="dropdownContent">
@@ -29,18 +29,19 @@
     </div>
 </nav>
 <div class="navhamburger">
-<div class="logomarca">
-    <img src="../lib/logo/logo.svg" alt="">
-    Other Level
-</div>
+    <a href="/">
+        <div class="logomarca">
+            <img src="../lib/logo/logo.svg" alt="">Other Level
+        </div>
+    </a>
 <div class="hamburger">
     <button class="dropnav" id="dropnav">
     <i class="fa-solid fa-bars"></i>
     </button>
     <div class="hamburgerdropdown">
     <div class="list-navbtns">
+        <button class="" id="home2">Página inicial</button>
         <button class="" id="criadoress">Criadores</button>
-        <button class="" id="projetoss">Projetos</button>
         <% if (currentUser) { %>
         <button class="" id="perfill">Perfil</button>
         <button class="posti" id="postt">Post</button>
@@ -52,3 +53,25 @@
     </div>
 </div>
 </div>
+<style>
+    .invisivel {
+        display: none;
+    }
+    .visivel {
+        display: block !important;
+    }
+</style>
+<script>
+    // Obtém o caminho da URL atual
+    var currentPath = window.location.pathname;
+
+    // Define o diretório raiz (ajuste conforme necessário)
+    var rootDirectory = "/";
+
+    // Verifica se a página está no diretório raiz
+    if (currentPath === rootDirectory) {
+        // Adiciona a classe "active" ao botão "home"
+        document.getElementById("home1").classList.add("invisivel");
+        document.getElementById("home2").classList.add("invisivel");
+    }
+</script>

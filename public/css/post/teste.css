@@ -102,14 +102,16 @@ input {
 .dots .paginacao {
   padding: 40px 0 0 0;
   display: flex;
-  width: 100%;
   justify-content: center;
+
 }
 
 .paginacao ul {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+
 }
 
 .dots ul .step {

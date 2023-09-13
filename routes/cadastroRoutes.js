@@ -39,6 +39,7 @@ router.post('/', upload.single('avatar'), (req, res) => {
 
   const uniqueId = generateRandomId();
   const newUser = new User({
+    admin: false,
     token: uniqueId,
     NomeCompleto: req.body.name,
     NomeDeUsuario: req.body.username,

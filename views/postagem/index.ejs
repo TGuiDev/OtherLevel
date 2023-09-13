@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="../css/global/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-<script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <%- include('../partials/navbar'); %>
@@ -26,23 +26,45 @@
           <img src="../<%= postagem.fotos && postagem.fotos.length > 0 ? postagem.fotos[postagem.fotos.length - 1] : '' %>" alt="Imagem Maior" class="main-image" id="mainImage">
         </div>
       </div>
-      <div class="card-precos">
+      <div class="aba-direita">
         <div class="card" id="card1">
           <div class="options">
-            <span class="option" id="option1">Option 1</span>
-            <span class="option" id="option2">Option 2</span>
-            <span class="option" id="option3">Option 3</span>
+            <span class="option op1 select" id="option1">Bronze</span>
+            <span class="option op2 " id="option2">Prata</span>
+            <span class="option op3" id="option3">Ouro</span>
           </div>
-          <h1 class="card-preco" id="cardPreco1">
-            Card Preço 1
-          </h1>
-          <p class="card-info" id="cardInfo1">
-            Benefícios: Benefício A<br>
-            Dias: Segunda, Quarta, Sexta<br>
-            Outros: Alguma outra informação longa que deve ser quebrada automaticamente para caber dentro do card
-          </p>
+          <div class="info">
+            <h1 class="card-preco" id="cardPreco1">
+              R$ 00,00
+            </h1>
+            <p class="card-info" id="cardInfo1">
+            </p>
+            <button class="btn-assinar"><span>Continuar</span> <i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
         </div>
+        <a href="/usuario/<%= postagem.autor.nome %>">
+          <div class="card-perfil">
+            <div class="avatar">
+              <img src="<%= postagem.autor.foto %>" alt="Avatar">
+            </div>
+            <div class="perfil-info">
+              <h1><%= postagem.autor.nome %></h1>
+              <div class="minitags">
+                <span>
+                  <i class="fa-solid fa-star"></i> <span id="notafalsa"></span>
+                </span>
+                <span>
+                  <i class="fa-solid fa-eye"></i> <span id="randomview"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
+    </div>
+    <div class="info-post">
+      <h1 class="titulo"><%= postagem.info.titulo %></h1>
+      <pre><%= postagem.info.descricao %></pre>
     </div>
   </main>
   <script src="../js/home/navbar.js"></script>
@@ -60,18 +82,18 @@ const cardInfo1 = document.getElementById('cardInfo1');
 
 // Sample content for the card options (you can change this as needed)
 const option1Content = {
-  preco: "<%= postagem.planos.bronze.valor %>",
-  outros: '<%= postagem.planos.bronze.valor %>',
+  preco: '<%= postagem.planos.bronze.valor %>',
+  outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op3 %>',
 };
 
 const option2Content = {
   preco: '<%= postagem.planos.prata.valor %>',
-  outros: '<%= postagem.planos.prata.valor %>',
+  outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op3 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op4 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op5 %>',
 };
 
 const option3Content = {
   preco: '<%= postagem.planos.ouro.valor %>',
-  outros: '<%= postagem.planos.ouro.valor %>',
+  outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op3 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op4 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op5 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op6 %>',
 };
 
 // Set initial content
@@ -100,9 +122,35 @@ function updateCardContent(content) {
 
   // Update the content based on the selected option
   cardPreco1.textContent = content.preco;
-  cardInfo1.innerHTML = `Outros: ${content.outros}`;
+  cardInfo1.innerHTML = `${content.outros}`;
   cardInfo1.style.display = 'block';
 }
 
+
+
+const options = document.querySelectorAll('.option');
+
+options.forEach(option => {
+  option.addEventListener('click', () => {
+    options.forEach(opt => {
+        opt.classList.remove('select');
+    });
+
+    option.classList.add('select');
+  });
+});
+
+
+
+function gerarNumeroAleatorio() {
+    var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    var numeroAleatorio2 = Math.floor(Math.random() * 5) + 1;
+    var numeroAleatorio3 = Math.floor(Math.random() * 5) + 1;
+
+    document.getElementById("randomview").textContent = numeroAleatorio;
+    document.getElementById("notafalsa").textContent = numeroAleatorio2 + '.' + numeroAleatorio3;
+
+}
+gerarNumeroAleatorio();
 
 </script>

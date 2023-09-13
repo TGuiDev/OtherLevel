@@ -58,9 +58,15 @@ router.post('/', uploadFields, async (req, res) => {
 
   const categoriaSelecionada = req.body.cat;
   const subcategoriaSelecionada = req.body.subcat;
-  const tagsInput = req.body.tags;
-  const tagsArray = tagsInput.split(',');
-  const tagsLimpa = Array.from(new Set(tagsArray.map(tag => tag.trim())));
+  // const tagsInput = req.body.tags;
+  // const tagsArray = tagsInput.split(',');
+  // const tagsLimpa = Array.from(new Set(tagsArray.map(tag => tag.trim())));
+
+  const tagsInput = req.body.tags; // Suponhamos que isso contenha as palavras separadas por espaços
+  const tagsArray = tagsInput.split(' '); // Use o espaço como separador
+  const tagsLimpa = tagsArray.filter(tag => tag.trim() !== ''); // Remova palavras em branco
+
+  console.log(tagsLimpa);
 
   // console.log(tagsInput)
   // console.log(tagsArray)

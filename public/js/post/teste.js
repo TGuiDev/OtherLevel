@@ -69,7 +69,7 @@ function limitWords(inputField, maxWords) {
       words = words.slice(0, maxWords);
       inputField.value = words.join(" ");
     }
-    document.getElementById("tagCounter").textContent = words.length + "/" + maxWords + " Palavras";
+  document.getElementById("tagCounter").textContent = words.length + "/" + maxWords + " Palavras";
   });
 
   inputField.addEventListener("keydown", function (event) {

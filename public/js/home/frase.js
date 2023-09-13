@@ -1,5 +1,6 @@
 const fraseElement = document.getElementById("frase");
-const palavras = ["Programador", "Designer", "Editor", "Fotógrafo"];
+// const palavras = ["Programador", "Designer", "Editor", "Fotógrafo"];
+const palavras = ["Programador", "Designer", "Editor de Vídeo", "Fotógrafo", "Escritor", "Músico", "Artista"];
 let indice = 0;
 
 function digitarPalavra() {
@@ -33,3 +34,7 @@ function apagarPalavra() {
 }
 
 digitarPalavra();
+
+
+
+

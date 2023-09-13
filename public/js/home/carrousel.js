@@ -82,3 +82,13 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+
+
+
+const cat1 = document.getElementById("categoria1");
+if (cat1) {
+    cat1.addEventListener("click", function () {
+        window.location.href = "/filtrar/designer";
+    });
+}

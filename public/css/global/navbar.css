@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
   transition: all 0.1s ease-in-out;
+  text-decoration: none !important;
 }
 
 :root{
@@ -138,6 +139,7 @@
   border-radius: 100%;
   width: 33px;
   height: 33px;
+  object-fit: cover;
 }
 
 .dropdown {

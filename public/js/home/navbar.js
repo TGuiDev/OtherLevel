@@ -5,6 +5,21 @@ if (topHome) {
         window.location.href = "/";
     });
 }
+
+const topHome1 = document.getElementById("home1");
+if (topHome1) {
+    topHome1.addEventListener("click", function () {
+        window.location.href = "/";
+    });
+}
+
+const topHome2 = document.getElementById("home2");
+if (topHome2) {
+    topHome2.addEventListener("click", function () {
+        window.location.href = "/";
+    });
+}
+
 const topLogin = document.getElementById("login");
 if (topLogin) {
     topLogin.addEventListener("click", function () {
@@ -30,13 +45,6 @@ if (topLogout) {
     });
 }
 
-// Hamburger menu
-// const hamHome = document.getElementById("dropnav");
-// if (hamHome) {
-//     hamHome.addEventListener("click", function () {
-//         window.location.href = "/";
-//     });
-// }
 const hamLogin = document.getElementById("loginn");
 if (hamLogin) {
     hamLogin.addEventListener("click", function () {

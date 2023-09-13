@@ -74,7 +74,7 @@
                                         <p class="error_email">Email inválido!</p>
                                     </div>
                                     <div class="input_item">
-                                        <input name="phone" type="tel" class="form_input" id="phone" oninvalid="this.classList.add('invalid')" required>
+                                        <input name="phone" type="tel" class="form_input" maxlength="15" id="phone" oninvalid="this.classList.add('invalid')" required>
                                         <label for="phone" class="form_label"><i class="fas fa-phone"></i> Celular</label>
                                     </div>
                                     <button type="button" class="btn nextBtn">Próximo</button>
@@ -177,7 +177,8 @@
 </html>
 <script>
     $(document).ready(function() {
-        $("#phone").inputmask({
+        // $("#phone").inputmask({
+        $("#phonee").inputmask({
             mask: "(99) 9 9999-9999", // Máscara para telefone com até 14 dígitos
             showMaskOnHover: false, // Não mostrar a máscara ao passar o mouse
             onBeforePaste: function(pastedValue) {

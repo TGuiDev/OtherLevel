@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const usuario = new mongoose.Schema({
-  admin: {
-    type: Boolean,
-    default: false
-  },
   token: {
     type: String,
     required: true,

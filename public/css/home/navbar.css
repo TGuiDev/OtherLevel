@@ -137,6 +137,7 @@ nav {
   border-radius: 100%;
   width: 33px;
   height: 33px;
+  object-fit: cover;
 }
 
 .dropdown {

@@ -59,6 +59,7 @@ const idsRoutes = require('./routes/idsRoutes');
 const perfilRoutes = require('./routes/perfilRoutes');
 const postagemRoutes = require('./routes/postagemRoutes');
 const fotoPostRoutes = require('./routes/fotoPostRoutes');
+const filtroRoutes = require('./routes/PesquisaRoutes');
 
 app.use('/', indexRoutes);
 app.use('/cadastro', cadastroRoutes);
@@ -70,6 +71,7 @@ app.use('/ids', idsRoutes);
 app.use('/perfil', perfilRoutes);
 app.use('/post', postagemRoutes);
 app.use('/postagem', fotoPostRoutes);
+app.use('/filtrar', filtroRoutes);
 
 app.use((req, res) => {
   res.redirect('/erro');

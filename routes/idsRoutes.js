@@ -5,18 +5,16 @@ const User = require('../schemas/Usuario');
 router.get('/', (req, res) => {
   // Verifica se o usuário está autenticado e se é um administrador
 
-  const ensureAuthenticated = (req, res, next) => {
-    if (req.session.user) {
-      next();
-    } else {
-      res.redirect('/'); 
-    }
-  };
+  // const admin = (req, res, next) => {
+  //   if (req.session.user.admin == true) {
+  //     next();
+  //   } else {
+  //     res.redirect('/'); 
+  //   }
+  // };
 
-  console.log('Auth:' + ensureAuthenticated)
-  console.log('Session: ' + req.session.user)
 
-  if (!req.isAuthenticated() || !req.user.admin) {
+  if (req.session.user.admin != true) {
     // Redireciona para a página inicial ou exibe uma mensagem de erro
     return res.redirect('/');
   }

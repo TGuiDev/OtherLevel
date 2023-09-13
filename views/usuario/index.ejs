@@ -38,34 +38,6 @@
                 <li><a href="<%= user.Links.Vimeo %>">      <i class="fa-brands faanim fa-vimeo"></i>      </a></li>
                 <li><a href="<%= user.Links.GitHub %>">     <i class="fa-brands faanim fa-github"></i>     </a></li>
                 <li><a href="mailto:<%= user.Email %>">     <i class="fa-solid faanim fa-envelope"></i>    </a></li>
-                <!-- <% if(user.Redes.Linkedin == 'Não Informado') { %>
-                  <% } else { %>
-                    <li><a href="<%= user.Links.Linkedin %>"><i class="fa-brands fa-linkedin"></i> <%= user.Redes.Linkedin %></a></li>
-                <% } %>
-                <% if(user.Redes.Insta == 'Não Informado') { %>
-                <% } else { %>
-                        <li><a href="<%= user.Links.Insta %>">  <i class="fa-brands fa-instagram"></i> <%= user.Redes.Insta %></a></li>
-                <% } %>
-                <% if(user.Redes.Behance == 'Não Informado') { %>
-                <% } else { %>
-                  <li><a href="<%= user.Links.Behance %>"><i class="fa-brands fa-behance"></i>   <%= user.Redes.Behance %></a></li>
-                <% } %>
-                <% if(user.Redes.Dribble == 'Não Informado') { %>
-                <% } else { %>
-                  <li><a href="<%= user.Links.Dribble %>"><i class="fa-brands fa-dribbble"></i>  <%= user.Redes.Dribble %></a></li>
-                <% } %>
-                <% if(user.Redes.Face == 'Não Informado') { %>
-                <% } else { %>
-                  <li><a href="<%= user.Links.Face %>">   <i class="fa-brands fa-facebook"></i>  <%= user.Redes.Face %></a></li>
-                <% } %>
-                <% if(user.Redes.Linkedin == 'Não Informado') { %>
-                <% } else { %>
-                  <li><a href="<%= user.Links.Vimeo %>">  <i class="fa-brands fa-vimeo"></i>     <%= user.Redes.Vimeo %></a></li>
-                <% } %>
-                <% if(user.Redes.Linkedin == 'Não Informado') { %>
-                <% } else { %>
-                  <li><a href="<%= user.Links.GitHub %>"> <i class="fa-brands fa-github"></i>    <%= user.Redes.GitHub %></a></li>
-                <% } %> -->
             </ul>
           </div>
           <div class="outros">
@@ -85,7 +57,7 @@
             </div>
             <div class="sobremim">
               <span class="tit">Sobre mim</span>
-              <span class="bio"><%= user.Bio %></span>
+              <span class="bio"><pre><%= user.Bio %></pre></span>
             </div>
             <div class="habilidades">
               <span class="tit">Habilidades</span>
