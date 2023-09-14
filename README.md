@@ -1,47 +1,47 @@
 <div align="center">
   
-  <img width="192" title="Whatsapp-Bot-Multi-Device-Profile" src="https://github.com/ArugaZ.png"/>
+  <img width="192" title="Other Level" src="https://imgur.com/sbuECf0.png"/>
 
 </div>
 
 <div align="center">
 
-  <img title="Whatsapp-Bot-Multi-Device" src="https://img.shields.io/badge/Whatsapp%20Bot%20Multi%20Device-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge">
+  <img title="Other-Level" src="https://img.shields.io/badge/Whatsapp%20Bot%20Multi%20Device-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge">
 
 </div>
 
 ---
 
 <div align="center">  
-  <a href="https://github.com/ArugaZ">
-    <img title="ArugaZ" src="https://img.shields.io/badge/AUTHOR-ARUGAZ-orange.svg?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/TGuiDev">
+    <img title="TGuiDev" src="https://img.shields.io/badge/AUTHOR-TGuiDev-orange.svg?style=for-the-badge&logo=github"></a>
 </div>
 <div align="center">
-  <a href="https://www.codefactor.io/repository/github/arugaz/whatsapp-bot/overview/master">
-    <img title="Whatsapp-Bot-Multi-Device-CodeFactor" src="https://img.shields.io/codefactor/grade/github/ArugaZ/whatsapp-bot/master?color=blue&label=CodeFactor&style=flat-square">
+  <a href="https://www.codefactor.io/repository/github/TGuiDev/OtherLevel/overview/master">
+    <img title="Other-Level-CodeFactor" src="https://img.shields.io/codefactor/grade/github/TGuiDev/OtherLevel/master?color=blue&label=CodeFactor&style=flat-square">
   </a>
-  <a href="https://github.com/arugaz/whatsapp-bot/issues">
-    <img title="Whatsapp-Bot-Multi-Device-Issues" src="https://img.shields.io/github/issues-raw/arugaz/whatsapp-bot?label=Issues&color=%23ff9aa2&style=flat-square" />
+  <a href="https://github.com/TGuiDev/OtherLevel/issues">
+    <img title="Other-Level-Issues" src="https://img.shields.io/github/issues-raw/TGuiDev/OtherLevel?label=Issues&color=%23ff9aa2&style=flat-square" />
   </a>
 </div>
 <div align="center">
-  <a href="https://github.com/arugaz/followers">
-    <img title="Whatsapp-Bot-Multi-Device-Followers" src="https://img.shields.io/github/followers/arugaz?label=Folls&color=%23ff9aa2&style=flat-square">
+  <a href="https://github.com/TGuiDev/followers">
+    <img title="Other-Level-Followers" src="https://img.shields.io/github/followers/TGuiDev?label=Folls&color=%23ff9aa2&style=flat-square">
   </a>
-  <a href="https://github.com/arugaz/whatsapp-bot/stargazers/">
-    <img title="Stars" src="https://img.shields.io/github/stars/arugaz/whatsapp-bot?label=Stars&color=%23ffb7b2&style=flat-square">
+  <a href="https://github.com/TGuiDev/OtherLevel/stargazers/">
+    <img title="Stars" src="https://img.shields.io/github/stars/TGuiDev/OtherLevel?label=Stars&color=%23ffb7b2&style=flat-square">
   </a>
-  <a href="https://github.com/arugaz/whatsapp-bot/network/members">
-    <img title="Whatsapp-Bot-Multi-Device-Forks" src="https://img.shields.io/github/forks/arugaz/whatsapp-bot?label=Forks&color=%23ffdac1&style=flat-square">
+  <a href="https://github.com/TGuiDev/OtherLevel/network/members">
+    <img title="Other-Level-Forks" src="https://img.shields.io/github/forks/TGuiDev/OtherLevel?label=Forks&color=%23ffdac1&style=flat-square">
   </a>
-  <a href="https://github.com/arugaz/whatsapp-bot/watchers">
-    <img title="Whatsapp-Bot-Multi-Device-Watching" src="https://img.shields.io/github/watchers/arugaz/whatsapp-bot?label=Watchers&color=%23e2f0cb&style=flat-square">
+  <a href="https://github.com/TGuiDev/OtherLevel/watchers">
+    <img title="Other-Level-Watching" src="https://img.shields.io/github/watchers/TGuiDev/OtherLevel?label=Watchers&color=%23e2f0cb&style=flat-square">
   </a>
-  <a href="https://github.com/arugaz/whatsapp-bot/blob/master/LICENSE">
-    <img title="Whatsapp-Bot-Multi-Device-License" src="https://img.shields.io/badge/License-GPL_3.0_or_later-blue.svg?color=%23b5ead7&style=flat-square"/>
+  <a href="https://github.com/TGuiDev/OtherLevel/blob/master/LICENSE">
+    <img title="Other-Level-License" src="https://img.shields.io/badge/License-GPL_3.0_or_later-blue.svg?color=%23b5ead7&style=flat-square"/>
   </a>
   <a href="https://hits.seeyoufarm.com">
-    <img title="Whatsapp-Bot-Multi-Device-Hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FArugaZ%2Fwhatsapp-bot&count_bg=%23c7ceea&title_bg=%23555555&icon=probot.svg&icon_color=%23c7ceea&title=Hits&edge_flat=true"/>
+    <img title="Other-Level-Hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTGuiDev%2FOtherLevel&count_bg=%23c7ceea&title_bg=%23555555&icon=probot.svg&icon_color=%23c7ceea&title=Hits&edge_flat=true"/>
   </a>
 </div>
 <div align="center">
@@ -55,29 +55,29 @@
 </p>
 
 <p align="center">
-  <img title="Whatsapp-Bot-Typescript" src="https://img.shields.io/badge/Typescript-031b36?style=for-the-badge&logo=typescript&logoColor=3178C6"></img>
-  <img title="Whatsapp-Bot-Prisma" src="https://img.shields.io/badge/prisma-29245c?style=for-the-badge&logo=prisma&logoColor=F7DF1E"></img>
-  <img title="Whatsapp-Bot-Mongo" src="https://img.shields.io/badge/mongoDB-033604?style=for-the-badge&logo=mongodb&logoColor=47A248"></img>
+  <img title="OtherLevel-Typescript" src="https://img.shields.io/badge/Typescript-031b36?style=for-the-badge&logo=typescript&logoColor=3178C6"></img>
+  <img title="OtherLevel-Prisma" src="https://img.shields.io/badge/prisma-29245c?style=for-the-badge&logo=prisma&logoColor=F7DF1E"></img>
+  <img title="OtherLevel-Mongo" src="https://img.shields.io/badge/mongoDB-033604?style=for-the-badge&logo=mongodb&logoColor=47A248"></img>
 </p>
 
 ---
 
 <p align="center">
-  <a href="https://github.com/arugaz/whatsapp-bot"><b>whatsapp-bot</b></a> out-of-the-box support on...
+  <a href="https://github.com/TGuiDev/OtherLevel"><b>OtherLevel</b></a> out-of-the-box support on...
 </p>
 
 <p align="center">
-  <img title="Whatsapp-Bot-Termux" src="https://img.shields.io/badge/Termux-302c2c?style=for-the-badge&logo=iterm2&logoColor=000000"></img>
-  <img title="Whatsapp-Bot-Server" src="https://img.shields.io/badge/self hosting-3d1513?style=for-the-badge&logo=serverless&logoColor=FD5750"></img>
-  <img title="Whatsapp-Bot-Railway" src="https://img.shields.io/badge/railway-362b2b?style=for-the-badge&logo=railway&logoColor=0B0D0E"></img>
+  <img title="OtherLevel-Termux" src="https://img.shields.io/badge/Termux-302c2c?style=for-the-badge&logo=iterm2&logoColor=000000"></img>
+  <img title="OtherLevel-Server" src="https://img.shields.io/badge/self hosting-3d1513?style=for-the-badge&logo=serverless&logoColor=FD5750"></img>
+  <img title="OtherLevel-Railway" src="https://img.shields.io/badge/railway-362b2b?style=for-the-badge&logo=railway&logoColor=0B0D0E"></img>
 </p>
 <p align="center">
-  <img title="Whatsapp-Bot-Heroku" src="https://img.shields.io/badge/heroku-9d7acc?style=for-the-badge&logo=heroku&logoColor=430098"></img>
-  <img title="Whatsapp-Bot-Koyeb" src="https://img.shields.io/badge/koyeb-362b2b?style=for-the-badge&logo=koyeb&logoColor=121212"></img>
-  <img title="Whatsapp-Bot-Replit" src="https://img.shields.io/badge/replit-3b1903?style=for-the-badge&logo=replit&logoColor=F26207"></img>
+  <img title="OtherLevel-Heroku" src="https://img.shields.io/badge/heroku-9d7acc?style=for-the-badge&logo=heroku&logoColor=430098"></img>
+  <img title="OtherLevel-Koyeb" src="https://img.shields.io/badge/koyeb-362b2b?style=for-the-badge&logo=koyeb&logoColor=121212"></img>
+  <img title="OtherLevel-Replit" src="https://img.shields.io/badge/replit-3b1903?style=for-the-badge&logo=replit&logoColor=F26207"></img>
 </p>
 
-<p align="center">Need help? please create an <a href="https://github.com/arugaz/whatsapp-bot/issues">issues</a></p>
+<p align="center">Need help? please create an <a href="https://github.com/TGuiDev/OtherLevel/issues">issues</a></p>
 
 ---
 
