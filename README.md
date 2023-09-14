@@ -19,9 +19,9 @@ Neste projeto, desenvolvemos uma aplicação web que visa auxiliar freelancers i
 - Divulgar publicações de **Freelancers** iniciante
 - Facilitsar o contato do Freelancer com o Cliente
 
-## Como Iniciar o Projeto
+<h1>Como Iniciar o Projeto</h1>
 
-### Clone o Projeto
+<h2>Clone o Projeto</h2>
 ```git
 git clone https://github.com/TGuiDev/OtherLevel.git
 ```
