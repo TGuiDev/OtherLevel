@@ -36,7 +36,7 @@ a {
     border-radius: 5px;
     margin: auto;
     padding: 0 10px;
-    max-width: 1400px;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +45,7 @@ a {
 
 .main-image {
     max-height: 100%;
+    width: 1000px;
     border-radius: 5px;
 }
 
@@ -207,7 +208,7 @@ a {
         align-items: center;
     }
     .imagens, .aba-direita{
-        width: 95%;
+        /* width: 95%; */
     }
     .imagens {
         flex-direction: column;
