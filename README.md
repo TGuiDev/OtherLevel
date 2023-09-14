@@ -48,6 +48,39 @@
   <p>Don't forget to click ⭐️ and fork this repository</p>
 </div>
 
+---
+
+<p align="center"> This whatsapp bot project (now) use 
+  <a href="https://github.com/adiwajshing/Baileys">Baileys Multi-Device.</a>
+</p>
+
+<p align="center">
+  <img title="Whatsapp-Bot-Typescript" src="https://img.shields.io/badge/Typescript-031b36?style=for-the-badge&logo=typescript&logoColor=3178C6"></img>
+  <img title="Whatsapp-Bot-Prisma" src="https://img.shields.io/badge/prisma-29245c?style=for-the-badge&logo=prisma&logoColor=F7DF1E"></img>
+  <img title="Whatsapp-Bot-Mongo" src="https://img.shields.io/badge/mongoDB-033604?style=for-the-badge&logo=mongodb&logoColor=47A248"></img>
+</p>
+
+---
+
+<p align="center">
+  <a href="https://github.com/arugaz/whatsapp-bot"><b>whatsapp-bot</b></a> out-of-the-box support on...
+</p>
+
+<p align="center">
+  <img title="Whatsapp-Bot-Termux" src="https://img.shields.io/badge/Termux-302c2c?style=for-the-badge&logo=iterm2&logoColor=000000"></img>
+  <img title="Whatsapp-Bot-Server" src="https://img.shields.io/badge/self hosting-3d1513?style=for-the-badge&logo=serverless&logoColor=FD5750"></img>
+  <img title="Whatsapp-Bot-Railway" src="https://img.shields.io/badge/railway-362b2b?style=for-the-badge&logo=railway&logoColor=0B0D0E"></img>
+</p>
+<p align="center">
+  <img title="Whatsapp-Bot-Heroku" src="https://img.shields.io/badge/heroku-9d7acc?style=for-the-badge&logo=heroku&logoColor=430098"></img>
+  <img title="Whatsapp-Bot-Koyeb" src="https://img.shields.io/badge/koyeb-362b2b?style=for-the-badge&logo=koyeb&logoColor=121212"></img>
+  <img title="Whatsapp-Bot-Replit" src="https://img.shields.io/badge/replit-3b1903?style=for-the-badge&logo=replit&logoColor=F26207"></img>
+</p>
+
+<p align="center">Need help? please create an <a href="https://github.com/arugaz/whatsapp-bot/issues">issues</a></p>
+
+---
+
 <!-- https://imgur.com/sbuECf0.png -->
 # Other Level
 
