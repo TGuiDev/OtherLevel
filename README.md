@@ -22,12 +22,15 @@
 
 ---
 
-<p align="center">Estes São os Principais Frameworks Usados</p>
+<p align="center">Estes São as Principais Ferramentas Usadas</p>
 
 <p align="center">
-  <img title="OtherLevel-Typescript" src="https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white"></img>
-  <img title="OtherLevel-Prisma" src="https://img.shields.io/badge/Node.JS-black?style=for-the-badge&logo=node.js&logoColor=green"></img>
-  <img title="OtherLevel-Mongo" src="https://img.shields.io/badge/mongoDB-033604?style=for-the-badge&logo=mongodb&logoColor=00ED64"></img>
+  <img title="OtherLevel-JavaScript" src="https://img.shields.io/badge/Javascript-1C1C1C?style=for-the-badge&logo=javascript&logoColor=yellow"></img>
+  <img title="OtherLevel-Node.Js" src="https://img.shields.io/badge/Node.JS-1C1C1C?style=for-the-badge&logo=node.js&logoColor=green"></img>
+  <img title="OtherLevel-Mongo" src="https://img.shields.io/badge/MongoDB-2e2d2b?style=for-the-badge&logo=mongodb&logoColor=green"></img>
+  ![javaScript](https://img.shields.io/badge/Javascript-1C1C1C?style=for-the-badge&logo=javascript&logoColor=yellow)
+  ![MongoDB](https://img.shields.io/badge/MongoDB-2e2d2b?style=for-the-badge&logo=mongodb&logoColor=green)
+  ![MongoDB](https://img.shields.io/badge/MongoDB-2e2d2b?style=for-the-badge&logo=mongodb&logoColor=green)
 </p>
 
 style
