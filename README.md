@@ -17,48 +17,20 @@
     <img title="TGuiDev" src="https://img.shields.io/badge/AUTHOR-TGuiDev-orange.svg?style=for-the-badge&logo=github"></a>
 </div>
 <div align="center">
-  <a href="https://www.codefactor.io/repository/github/TGuiDev/OtherLevel/overview/master">
-    <img title="Other-Level-CodeFactor" src="https://img.shields.io/codefactor/grade/github/TGuiDev/OtherLevel/master?color=blue&label=CodeFactor&style=flat-square">
-  </a>
-  <a href="https://github.com/TGuiDev/OtherLevel/issues">
-    <img title="Other-Level-Issues" src="https://img.shields.io/github/issues-raw/TGuiDev/OtherLevel?label=Issues&color=%23ff9aa2&style=flat-square" />
-  </a>
-</div>
-<div align="center">
-  <a href="https://github.com/TGuiDev/followers">
-    <img title="Other-Level-Followers" src="https://img.shields.io/github/followers/TGuiDev?label=Folls&color=%23ff9aa2&style=flat-square">
-  </a>
-  <a href="https://github.com/TGuiDev/OtherLevel/stargazers/">
-    <img title="Stars" src="https://img.shields.io/github/stars/TGuiDev/OtherLevel?label=Stars&color=%23ffb7b2&style=flat-square">
-  </a>
-  <a href="https://github.com/TGuiDev/OtherLevel/network/members">
-    <img title="Other-Level-Forks" src="https://img.shields.io/github/forks/TGuiDev/OtherLevel?label=Forks&color=%23ffdac1&style=flat-square">
-  </a>
-  <a href="https://github.com/TGuiDev/OtherLevel/watchers">
-    <img title="Other-Level-Watching" src="https://img.shields.io/github/watchers/TGuiDev/OtherLevel?label=Watchers&color=%23e2f0cb&style=flat-square">
-  </a>
-  <a href="https://github.com/TGuiDev/OtherLevel/blob/master/LICENSE">
-    <img title="Other-Level-License" src="https://img.shields.io/badge/License-GPL_3.0_or_later-blue.svg?color=%23b5ead7&style=flat-square"/>
-  </a>
-  <a href="https://hits.seeyoufarm.com">
-    <img title="Other-Level-Hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTGuiDev%2FOtherLevel&count_bg=%23c7ceea&title_bg=%23555555&icon=probot.svg&icon_color=%23c7ceea&title=Hits&edge_flat=true"/>
-  </a>
-</div>
-<div align="center">
-  <p>Don't forget to click ⭐️ and fork this repository</p>
+  <p>Não se esqueça de clicar ⭐️ e impulsionar este repositório</p>
 </div>
 
 ---
 
-<p align="center"> This whatsapp bot project (now) use 
-  <a href="https://github.com/adiwajshing/Baileys">Baileys Multi-Device.</a>
-</p>
+<p align="center">Estes São os Principais Frameworks Usados</p>
 
 <p align="center">
-  <img title="OtherLevel-Typescript" src="https://img.shields.io/badge/Typescript-031b36?style=for-the-badge&logo=typescript&logoColor=3178C6"></img>
-  <img title="OtherLevel-Prisma" src="https://img.shields.io/badge/prisma-29245c?style=for-the-badge&logo=prisma&logoColor=F7DF1E"></img>
-  <img title="OtherLevel-Mongo" src="https://img.shields.io/badge/mongoDB-033604?style=for-the-badge&logo=mongodb&logoColor=47A248"></img>
+  <img title="OtherLevel-Typescript" src="https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white"></img>
+  <img title="OtherLevel-Prisma" src="https://img.shields.io/badge/Node.JS-black?style=for-the-badge&logo=node.js&logoColor=green"></img>
+  <img title="OtherLevel-Mongo" src="https://img.shields.io/badge/mongoDB-033604?style=for-the-badge&logo=mongodb&logoColor=00ED64"></img>
 </p>
+
+style
 
 ---
 
