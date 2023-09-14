@@ -9,3 +9,6 @@ Este é o repositório do meu Trabalho de Conclusão de Curso (TCC) que se conce
 Neste projeto, desenvolvemos uma aplicação web que visa auxiliar freelancers iniciantes a encontrarem oportunidades de trabalho e aprimorarem suas habilidades.
 
 ## Funcionalidades Principais 
+
+- Divulgar publicações de **Freelancers** iniciante
+- Facilitar o contato do Freelancer com o Cliente
