@@ -8,7 +8,26 @@ Este é o repositório do meu Trabalho de Conclusão de Curso (TCC) que se conce
 
 Neste projeto, desenvolvemos uma aplicação web que visa auxiliar freelancers iniciantes a encontrarem oportunidades de trabalho e aprimorarem suas habilidades.
 
+## Tecnologias Utilizadas
+
+- Node.js
+- MongoDB
+- Embedded JavaScript
+
 ## Funcionalidades Principais 
 
 - Divulgar publicações de **Freelancers** iniciante
-- Facilitar o contato do Freelancer com o Cliente
+- Facilitsar o contato do Freelancer com o Cliente
+
+## Como Iniciar o Projeto
+
+# Clone o Projeto
+```git
+git clone https://github.com/TGuiDev/OtherLevel.git
+```
+
+<!-- 
+```js
+
+```
+-->
