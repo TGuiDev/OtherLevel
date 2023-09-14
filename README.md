@@ -21,7 +21,7 @@ Neste projeto, desenvolvemos uma aplicação web que visa auxiliar freelancers i
 
 ## Como Iniciar o Projeto
 
-# Clone o Projeto
+### Clone o Projeto
 ```git
 git clone https://github.com/TGuiDev/OtherLevel.git
 ```
