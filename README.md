@@ -22,6 +22,7 @@ Neste projeto, desenvolvemos uma aplicação web que visa auxiliar freelancers i
 <h1>Como Iniciar o Projeto</h1>
 
 <h2>Clone o Projeto</h2>
+
 ```git
 git clone https://github.com/TGuiDev/OtherLevel.git
 ```
@@ -32,8 +33,12 @@ git clone https://github.com/TGuiDev/OtherLevel.git
 npm i
 ```
 
-<!-- 
-```js
+<h2>Inicialização do projeto</h2>
 
+```bash 
+node .
 ```
--->
+ou
+```bash 
+npm start
+```
