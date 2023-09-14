@@ -26,6 +26,12 @@ Neste projeto, desenvolvemos uma aplicação web que visa auxiliar freelancers i
 git clone https://github.com/TGuiDev/OtherLevel.git
 ```
 
+<h2>Instale as Dependências </h2>
+
+```bash
+npm i
+```
+
 <!-- 
 ```js
 
