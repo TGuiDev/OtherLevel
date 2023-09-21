@@ -147,9 +147,12 @@ ul{
   align-items: center;
 }
 
-.sobremim .bio {
+.sobremim .bio pre{
   font-family: Arial, Helvetica, sans-serif;
+  text-wrap: wrap;
 }
+
+
 
 .outros .info-posts .box {
   /* background: red; */
@@ -384,6 +387,53 @@ text-decoration: none;
   font-size: 25px !important;
 }
 
+
+.nopost {
+  /* background: red; */
+  width: 90%;
+  margin: auto;
+  justify-self: center;
+}
+
+.cardpost {
+  width: 35%;
+  height: 270px;
+  border-radius: 10px;
+  border: 2px dashed #632ed6a4;
+}
+
+.newpost {
+  gap: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.newpost img {
+  width: 15%;
+}
+.newpost h1 {
+  font-family: 'Arial', Courier, monospace;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.newpost h2 {
+  font-family: 'Arial', Courier, monospace;
+  width: 80%;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.btn_newpost {
+  background: black;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: white;
+  text-transform: capitalize;
+}
 
 @media (max-width: 860px) {
   .informacoes {

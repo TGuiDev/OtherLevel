@@ -14,7 +14,7 @@ router.get('/:tag', async (req, res) => {
   try {
     const posts = await Post.find({ 'info.categorias.categoria': tag });
 
-    res.render('pesquisa/', { posts, tag: tag });
+    res.render('pesquisa/', { posts, pesquisa: tag });
 
   } catch (error) {
     console.error('Erro ao buscar postagens:', error);

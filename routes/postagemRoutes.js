@@ -66,7 +66,7 @@ router.post('/', uploadFields, async (req, res) => {
   const tagsArray = tagsInput.split(' '); // Use o espaço como separador
   const tagsLimpa = tagsArray.filter(tag => tag.trim() !== ''); // Remova palavras em branco
 
-  console.log(tagsLimpa);
+  // console.log(tagsLimpa);
 
   // console.log(tagsInput)
   // console.log(tagsArray)

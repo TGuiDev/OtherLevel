@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Other Level | v1.0.0</title> 
+    <title>Other Level | v1.0.1</title> 
 
     <!-- LINK's -->
     <link rel="stylesheet" href="../css/home/style.css">
@@ -33,42 +33,42 @@
                   <i id="left" class="fa-solid fa-angle-left"></i>
                   <ul class="carousel">
                     <button class="cardd" id="categoria1">
-                      <a href="/filtrar/Design IA">
+                      <a href="/filtrar/Design IA#search">
                         <li class="card c1">
                           <h2>Design IA</h2>
                         </li>
                       </a>
                     </button>
                     <button class="cardd" id="categoria2">
-                      <a href="/filtrar/Programação">
+                      <a href="/filtrar/Logo Maker#search">
                         <li class="card c2">
                           <h2>Logo Maker</h2>
                         </li>
                       </a>
                     </button>
                     <button class="cardd" id="categoria3">
-                      <a href="/filtrar/Web Design">
+                      <a href="/filtrar/Web Design#search">
                         <li class="card c3">
                           <h2>Web-Design <br> UI / UX </h2>
                         </li>
                       </a>
                     </button>
                     <button class="cardd" id="categoria3">
-                      <a href="/filtrar/Social Mídia">
+                      <a href="/filtrar/Social Mídia#search">
                         <li class="card c4">
                           <h2>Social Mídia</h2>
                         </li>
                       </a>
                     </button>
                     <button class="cardd" id="categoria4">
-                      <a href="/filtrar/Design de Produto">
+                      <a href="/filtrar/Design de Produto#search">
                         <li class="card c5">
                           <h2>Design de Produto</h2>
                         </li>
                       </a>
                     </button>
                     <button class="cardd" id="categoria5">
-                      <a href="/filtrar/Design 3D">
+                      <a href="/filtrar/Design 3D#search">
                         <li class="card c6">
                           <h2>Design 3D</h2>
                         </li>
@@ -79,6 +79,16 @@
                 </div>
           </div>
       </div>
+      <form action="/pesquisa#search" method="GET">
+        <div class="div-busca">
+          <div class="guia-busca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input placeholder="Ex: UI/UX, Design, Página Web" type="search" name="pesquisa" class="pesquisa" id="pesquisa">
+          </div>
+          <button type="submit" class="btn-pesquisar" id="btn-pesquisar" name="submit">Pesquisar</button>
+        </div>
+      </form>
+      
       <div class="postagens">
         <% if(post == true) { %>
           <div class="card-list">
@@ -104,6 +114,10 @@
       <%}%>
     </div>
   </main>
+
+  <%- include('../partials/footer'); %>
+
+
     <script src="./js/home/navbar.js"></script>
     <script src="./js/home/carrousel.js"></script>
     <script src="./js/home/frase.js"></script>

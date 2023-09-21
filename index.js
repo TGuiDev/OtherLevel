@@ -60,6 +60,7 @@ const perfilRoutes = require('./routes/perfilRoutes');
 const postagemRoutes = require('./routes/postagemRoutes');
 const fotoPostRoutes = require('./routes/fotoPostRoutes');
 const filtroRoutes = require('./routes/PesquisaRoutes');
+const Pesquisa = require('./routes/Pesquisa2');
 
 app.use('/', indexRoutes);
 app.use('/cadastro', cadastroRoutes);
@@ -72,6 +73,7 @@ app.use('/perfil', perfilRoutes);
 app.use('/post', postagemRoutes);
 app.use('/postagem', fotoPostRoutes);
 app.use('/filtrar', filtroRoutes);
+app.use('/pesquisa', Pesquisa);
 
 app.use((req, res) => {
   res.redirect('/erro');

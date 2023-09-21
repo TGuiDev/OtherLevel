@@ -99,7 +99,18 @@
       <div class="col2">
         <div class="postagens">
           <% if (postagens.length === 0) { %>
-            <p>Não possui postagens.</p>
+            <div class="nopost">
+              <div class="cardpost">
+                <div class="newpost">
+                  <div class="img"><img src="../../lib/logo/upload.png" alt=""></div>
+                  <div class="haga1">
+                    <h1>Carregue sua primeira postagem</h1>
+                    <h2>Mostre o seu melhor trabalho. Obtenha feedback, curtidas e faça parte de uma comunidade em crescimento.</h2>
+                  </div>
+                  <a class="btn_newpost" href="/post">Criar postagem</a>
+                </div>
+              </div>
+            </div>
           <% } else { %>
               <% postagens.forEach(postagem => { %>
                 <div class="cardi">
@@ -118,6 +129,7 @@
       </div>
     </div>
   </div>
+  <%- include('../partials/footer'); %>
 </body>
 </html>
 <script src="./js/home/navbar.js""></script>

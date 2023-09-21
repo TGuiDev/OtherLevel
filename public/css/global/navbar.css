@@ -178,13 +178,20 @@
 }
 
 .show-dropdown {
+  padding: 10px 0;
   min-width: 150px;
   display: block;
   transition: all 125ms ease-in !important;
 }
 
-.logout{
-  color: var(--cor-erro) !important;
+.logout {
+  color: var(--branco) !important;
+  background: var(--cor-erro) !important;
+  min-width: 60% !important;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px !important;
 }
 
 .buttons .normal {
@@ -267,32 +274,36 @@
       font-size: 2rem;
   }
   .hamburgerdropdown {
+    align-items: flex-start;
     justify-content: center;
     display: none;
     background: var(--branco);
-    width: 160px;
-    padding: 10px 5px;
+    width: 50%;
+    padding: 50px 0;
     border-radius: 10px;
-    position: absolute;
-    top: 40px;
-    right: 80px;
+    position: fixed;
     z-index: 1000;
-  }
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
   .list-navbtns {
     transition: all 8s ease-in-out;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
   }
 
   .list-navbtns button {
+    font-size: 1.3rem;
     font-weight: bold;
     color: var(--cor1);
   }
 
   #loginn {
     border-radius: 5px;
+    width: 50%;
     color: var(--branco);
     background: var(--verde);
     border: 1px solid transparent;

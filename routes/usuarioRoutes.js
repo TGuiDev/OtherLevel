@@ -30,7 +30,7 @@ router.get('/:param',async (req, res) => {
           res.redirect('/home');
         } else {
           const postagens = await Post.find({ 'autor.nome': user.NomeDeUsuario });
-          console.log(user.Seguidores.length);
+          // console.log(user.Seguidores.length);
           res.render('usuario', { user: user, postagens: postagens });
         }
       })

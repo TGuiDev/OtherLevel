@@ -13,21 +13,26 @@ body {
 	justify-content: center;
 	color: #393232;
 } */
-
-:root {
-    --navbar: #000;
-    --branco: #ffffff;
-    --preto: #000000;
-    --verde: #19a463;
-    --vinho: #720022;
-    --roxo-vidro: #ececec28;
-    --cor1: #632ed6;
-    --cor2: #1a1f38;
-    --cor3: #eeeeee;
-    --cor4: #424242;
-    --cor5: #34495e;
-    --cor-erro: #ff0035;
-    --corinput: #e2e2e2b4;
+:root{
+  --navbar: #000;
+  --branco: #ffffff;
+  --preto: #000000;
+  --verde: #19a463;
+  --vinho: #720022;
+  --roxo-vidro: #ececec28;
+  --cor1: #632ed6;
+  --cor2: #1a1f38;
+  --cor3: #eeeeee;
+  --cor4: #424242;
+  --cor5: #34495e;
+  --cor-erro: #ff0035;
+  --corinput: #e2e2e2b4;
+  
+  --cinza-texto: #666666;
+  --cinza-claro: #DADADA;
+  --cinza-hover: #E6E6E6;
+  --prata-base: #F8F8F8;
+  --branco:  #FFFFFF;
 }
 
 a{
@@ -45,7 +50,7 @@ figure {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 50px 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .postagem {

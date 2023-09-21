@@ -85,12 +85,9 @@ a {
     padding-bottom: 15px;
     /* flex-direction: column; */
     border-radius: 8px;
+    justify-content: start;
 }
-.carousel .card .img {
-    background: #8B53FF;
-    height: 148px;
-    width: 148px;
-    border-radius: 50%;
+.carousel .card {
 }
 .card h2{
     padding: 10px 0px 0px 10px;
@@ -107,9 +104,15 @@ a {
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
     .wrapper .carousel{
         grid-auto-columns: calc(((100%)/ 3) - 26px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .wrapper .carousel{
+        grid-auto-columns: calc(((100%)/ 2) - 26px);
     }
 }
 
@@ -119,42 +122,37 @@ a {
     }
 }
 
-.c1{
-    background-image: url(https://imgur.com/byHUowl.png) !important;
-    /* background-image: url(../../lib/carrousel/ia.jpg) !important; */
+.card {
+    object-fit: cover !important;
+    background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
-    background-repeat: no-repeat !important;
+}
+
+.c1{
+    /* background-image: url(https://imgur.com/oTOVNwn.png) !important; */
+    background-image: url(https://imgur.com/byHUowl.png) !important;
 }
 .c2{
+    /* background-image: url(https://imgur.com/lFxshqb.png) !important; */
     background-image: url(https://imgur.com/tsJxtFv.png) !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
 }
 .c3{
+    /* background-image: url(https://imgur.com/Dmx6zKq.png) !important; */
     background-image: url(https://imgur.com/Pxl350r.png) !important;
-    background-position: right !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
+    /* background-position: right !important; */
 }
 .c4{
+    /* background-image: url(https://imgur.com/Ldk7tEw.png) !important; */
     background-image: url(https://imgur.com/xGTmG9A.png) !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
 }
 .c5{
+    /* background-image: url(https://imgur.com/CyOXwoW.png) !important; */
     background-image: url(https://imgur.com/sKLYRIR.png) !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
 }
 .c6{
+    /* background-image: url(https://imgur.com/LvbU5r6.png) !important; */
     background-image: url(https://imgur.com/oON3uHx.png) !important;
-    background-position: top !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
 }
 
 /* https://www.behance.net/gallery/171885861/Bakery */

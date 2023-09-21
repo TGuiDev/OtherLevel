@@ -16,6 +16,7 @@ router.get('/:id', (req, res) => {
 
   Post.findById(postagemId)
     .then((postagem) => {
+      console.log(postagem.info.tags)
       res.render('postagem', { postagem });
     })
     .catch((error) => {

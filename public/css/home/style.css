@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2? família=Oswald:wght@200&display=swap');
 
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
-  transition: all 0.1s ease-in-out;
-}
-
 :root{
   --navbar: #000;
   --branco: #ffffff;
@@ -24,11 +15,26 @@
   --cor5: #34495e;
   --cor-erro: #ff0035;
   --corinput: #e2e2e2b4;
+  
+  --cinza-texto: #666666;
+  --cinza-claro: #DADADA;
+  --cinza-hover: #E6E6E6;
+  --prata-base: #F8F8F8;
+  --branco:  #FFFFFF;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.1s ease-in-out;
 }
 
 ::selection{
   color: var(--cor1);
-  background-color: var(--branco);
+  background-color: var(--cor2);
 }
 ::-webkit-scrollbar {
   display: none;
@@ -155,4 +161,58 @@ main{
 
 ol, ul {
   padding-left: 0rem !important;
+}
+
+
+.guia-busca {
+  justify-content: center;
+  gap: 10px;
+  min-width: 30%;
+  max-width: 900px;
+  height: 60px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  /* margin-bottom: 5vh; */
+  border-radius: 50px;
+  border: 1px solid rgb(172, 172, 172);
+  overflow: hidden;
+}
+.guia-busca .pesquisa{
+  /* width: calc(100% / 3); */
+  outline: none;
+  border: none;
+  width: 100%;
+  /* height: 55vh; */
+  font-size: 1.2rem;
+  padding: 0 15px 0 0;
+}
+.btn-pesquisar {
+  background: none;
+  border: none;
+  color: #DADADA;
+  border: 1px solid var(--cor1);
+  background: radial-gradient(circle, var(--cor1) 0%, var(--cor2) 100%);
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+.btn-pesquisar:hover {
+  background: white;
+  color: var(--cor1);
+}
+
+.div-busca {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  /* background: blue; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+@media only screen and (max-width: 1200px) {
+  .guia-busca {
+    max-width: 90%;
+  }
 }

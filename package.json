@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "postcss styles.css -o public/css/tailwind.css",
     "start": "nodemon index.js",
-    "dev": "browser-sync start --config bs-config.js --no-open"
+    "dev": "browser-sync start --config bs-config.js --no-open",
+    "nodemon": "nodemon index.js"
   },
   "author": "Gui e Mily",
   "license": "ISC",

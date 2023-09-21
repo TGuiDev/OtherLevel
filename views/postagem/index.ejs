@@ -1,148 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/postagem/style1.css">
-    <title><%= postagem.info.titulo %></title>
-    <link rel="shortcut icon" href="../<%= postagem.capa %>" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../css/global/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/postagem/style1.css">
+  <title>
+    <%= postagem.info.titulo %>
+  </title>
+  <link rel="shortcut icon" href="../<%= postagem.capa %>" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/b798675e62.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <%- include('../partials/navbar'); %>
-  <main>
-    <div class="row-1">
-      <div class="imagens">
-        <div class="gallery" id="gallery">
-          <% for (let i = 0; postagem.fotos?.length && i < postagem.fotos.length; i++) { %>
-              <img src="../<%= postagem.fotos[i] %>" alt="Imagem <%= i + 1 %>" class=" w-100">
-          <% } %>
-        </div>
-        <div class="main-image-container">
-          <img src="../<%= postagem.fotos && postagem.fotos.length > 0 ? postagem.fotos[postagem.fotos.length - 1] : '' %>" alt="Imagem Maior" class="main-image" id="mainImage">
-        </div>
-      </div>
-      <div class="aba-direita">
-        <div class="card" id="card1">
-          <div class="options">
-            <span class="option op1 select" id="option1">Bronze</span>
-            <span class="option op2 " id="option2">Prata</span>
-            <span class="option op3" id="option3">Ouro</span>
+  <%- include('../partials/navbar'); %>
+    <main>
+      <div class="row-1">
+        <div class="imagens">
+          <div class="gallery" id="gallery">
+            <img src="../<%= postagem.capa %>" alt="Imagem <%=  0 %>">
+            <% for (let i=0; postagem.fotos?.length && i < postagem.fotos.length; i++) { %>
+              <img src="../<%= postagem.fotos[i] %>" alt="Imagem <%= i + 1 %>"
+                <%=style='width: calc(100% /  postagem.fotos.length + 1 );' %> >
+              <% } %>
           </div>
-          <div class="info">
-            <h1 class="card-preco" id="cardPreco1">
-              R$ 00,00
-            </h1>
-            <p class="card-info" id="cardInfo1">
-            </p>
-            <button class="btn-assinar"><span>Continuar</span> <i class="fa-solid fa-arrow-right-long"></i></button>
+          <div class="main-image-container">
+            <img src="../<%= postagem.capa %>" alt="Imagem Maior" class="main-image" id="mainImage">
           </div>
         </div>
-        <a href="/usuario/<%= postagem.autor.nome %>">
-          <div class="card-perfil">
-            <div class="avatar">
-              <img src="<%= postagem.autor.foto %>" alt="Avatar">
+        <div class="aba-direita">
+          <div class="card-plano" id="card1">
+            <div class="options">
+              <span class="option op1 select" id="option1">Bronze</span>
+              <span class="option op2 " id="option2">Prata</span>
+              <span class="option op3" id="option3">Ouro</span>
             </div>
-            <div class="perfil-info">
-              <h1><%= postagem.autor.nome %></h1>
-              <div class="minitags">
-                <span>
-                  <i class="fa-solid fa-star"></i> <span id="notafalsa"></span>
-                </span>
-                <span>
-                  <i class="fa-solid fa-eye"></i> <span id="randomview"></span>
-                </span>
+            <div class="info">
+              <h1 class="card-preco" id="cardPreco1">
+                R$ 00,00
+              </h1>
+              <p class="card-info" id="cardInfo1">
+              </p>
+              <button class="btn-assinar"><span>Continuar</span> <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+          </div>
+          <a class="perfil-usuario" href="/usuario/<%= postagem.autor.nome %>">
+            <div class="card-perfil">
+              <div class="avatar">
+                <img src="<%= postagem.autor.foto %>" alt="Avatar">
+              </div>
+              <div class="perfil-info">
+                <h1>
+                  <%= postagem.autor.nome %>
+                </h1>
+                <div class="minitags">
+                  <span>
+                    <i class="fa-solid fa-star"></i> <span id="notafalsa"></span>
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-eye"></i> <span id="randomview"></span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="info-post">
-      <h1 class="titulo"><%= postagem.info.titulo %></h1>
-      <pre><%= postagem.info.descricao %></pre>
-    </div>
-  </main>
-  <script src="../js/home/navbar.js"></script>
+      <div class="centerr">
+        <div class="info-post">
+          <h1 class="titulo">
+            <%= postagem.info.titulo %>
+          </h1>
+          <pre><%= postagem.info.descricao %></pre>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer'); %>
+      <script src="../js/home/navbar.js"></script>
 </body>
+
 </html>
 <script src="../js/postagem/script1.js"></script>
 
 <script>
 
-const card1 = document.getElementById('card1');
-const option1 = document.getElementById('option1');
-const option2 = document.getElementById('option2');
-const option3 = document.getElementById('option3');
-const cardInfo1 = document.getElementById('cardInfo1');
+  const card1 = document.getElementById('card1');
+  const option1 = document.getElementById('option1');
+  const option2 = document.getElementById('option2');
+  const option3 = document.getElementById('option3');
+  const cardInfo1 = document.getElementById('cardInfo1');
 
-// Sample content for the card options (you can change this as needed)
-const option1Content = {
-  preco: '<%= postagem.planos.bronze.valor %>',
-  outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op3 %>',
-};
+  // Sample content for the card options (you can change this as needed)
+  const option1Content = {
+    preco: '<%= postagem.planos.bronze.valor %>',
+    outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.bronze.opcao.op3 %>',
+  };
 
-const option2Content = {
-  preco: '<%= postagem.planos.prata.valor %>',
-  outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op3 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op4 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op5 %>',
-};
+  const option2Content = {
+    preco: '<%= postagem.planos.prata.valor %>',
+    outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op3 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op4 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.prata.opcao.op5 %>',
+  };
 
-const option3Content = {
-  preco: '<%= postagem.planos.ouro.valor %>',
-  outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op3 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op4 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op5 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op6 %>',
-};
+  const option3Content = {
+    preco: '<%= postagem.planos.ouro.valor %>',
+    outros: '<i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op1 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op2 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op3 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op4 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op5 %></br><i class="fa-solid fa-square-check"></i> <%= postagem.planos.ouro.opcao.op6 %>',
+  };
 
-// Set initial content
-updateCardContent(option1Content);
-
-// Click event handlers
-option1.addEventListener('click', () => {
-  // Update content when clicked
+  // Set initial content
   updateCardContent(option1Content);
-});
 
-option2.addEventListener('click', () => {
-  // Update content when clicked
-  updateCardContent(option2Content);
-});
-
-option3.addEventListener('click', () => {
-  // Update content when clicked
-  updateCardContent(option3Content);
-});
-
-// Function to update card content
-function updateCardContent(content) {
-  // Hide all card infos initially
-  cardInfo1.style.display = 'none';
-
-  // Update the content based on the selected option
-  cardPreco1.textContent = content.preco;
-  cardInfo1.innerHTML = `${content.outros}`;
-  cardInfo1.style.display = 'block';
-}
-
-
-
-const options = document.querySelectorAll('.option');
-
-options.forEach(option => {
-  option.addEventListener('click', () => {
-    options.forEach(opt => {
-        opt.classList.remove('select');
-    });
-
-    option.classList.add('select');
+  // Click event handlers
+  option1.addEventListener('click', () => {
+    // Update content when clicked
+    updateCardContent(option1Content);
   });
-});
+
+  option2.addEventListener('click', () => {
+    // Update content when clicked
+    updateCardContent(option2Content);
+  });
+
+  option3.addEventListener('click', () => {
+    // Update content when clicked
+    updateCardContent(option3Content);
+  });
+
+  // Function to update card content
+  function updateCardContent(content) {
+    // Hide all card infos initially
+    cardInfo1.style.display = 'none';
+
+    // Update the content based on the selected option
+    cardPreco1.textContent = content.preco;
+    cardInfo1.innerHTML = `${content.outros}`;
+    cardInfo1.style.display = 'block';
+  }
 
 
 
-function gerarNumeroAleatorio() {
+  const options = document.querySelectorAll('.option');
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      options.forEach(opt => {
+        opt.classList.remove('select');
+      });
+
+      option.classList.add('select');
+    });
+  });
+
+
+
+  function gerarNumeroAleatorio() {
     var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
     var numeroAleatorio2 = Math.floor(Math.random() * 5) + 1;
     var numeroAleatorio3 = Math.floor(Math.random() * 5) + 1;
@@ -150,7 +168,22 @@ function gerarNumeroAleatorio() {
     document.getElementById("randomview").textContent = numeroAleatorio;
     document.getElementById("notafalsa").textContent = numeroAleatorio2 + '.' + numeroAleatorio3;
 
-}
-gerarNumeroAleatorio();
+  }
+  gerarNumeroAleatorio();
 
 </script>
+
+<style>
+  .gallery img {
+    width: 125px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .gallery img {
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+</style>

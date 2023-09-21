@@ -71,14 +71,14 @@ if (hamLogout) {
 }
 
 
-window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('nav');
-  
-  if (window.pageYOffset > 1) {
-    navbar.classList.add('fixed');
-  } else {
-    navbar.classList.remove('fixed');
-  }
+window.addEventListener('scroll', function () {
+    var navbar = document.getElementById('nav');
+
+    if (window.pageYOffset > 1) {
+        navbar.classList.add('fixed');
+    } else {
+        navbar.classList.remove('fixed');
+    }
 });
 
 
@@ -86,25 +86,38 @@ window.addEventListener('scroll', function() {
 // Função DropDown
 const dropdownBtn = document.getElementById("drop");
 const dropdownContent = document.getElementById("dropdownContent");
-if(dropdownBtn){
+if (dropdownBtn) {
 
-  dropdownBtn.addEventListener("click", function() {
-    dropdownContent.classList.toggle("show-dropdown");
-  });
-  
-  document.addEventListener("click", function(event) {
-    if (!dropdownBtn.contains(event.target)) {
-      dropdownContent.classList.remove("show-dropdown");
-    }
-  });
+    dropdownBtn.addEventListener("click", function () {
+        dropdownContent.classList.toggle("show-dropdown");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!dropdownBtn.contains(event.target)) {
+            dropdownContent.classList.remove("show-dropdown");
+        }
+    });
 }
 
 
- document.getElementById('dropnav').addEventListener('click', function() {
-  var dropdown = document.querySelector('.hamburgerdropdown');
-  if (dropdown.style.display === 'flex') {
-    dropdown.style.display = 'none';
-  } else {
-    dropdown.style.display = 'flex';
-  }
+document.getElementById('dropnav').addEventListener('click', function () {
+    var dropdown = document.querySelector('.hamburgerdropdown');
+
+    if (dropdown.style.display === 'flex') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'flex';
+    }
+
+    // Altere o ícone
+    var icon = document.querySelector('.fa-solid.fa-bars');
+    var icon2 = document.querySelector('.fa-solid.fa-x');
+    if (icon) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-x');
+    }
+    if (icon2) {
+        icon2.classList.remove('fa-x');
+        icon2.classList.add('fa-bars');
+    }
 });

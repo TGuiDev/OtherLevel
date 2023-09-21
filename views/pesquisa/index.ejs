@@ -1,46 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Other Level</title> 
+  <title>Other Level</title>
 
-    <!-- LINK's -->
-    <link rel="stylesheet" href="../css/home/style.css">
-    <link rel="stylesheet" href="../css/global/navbar.css">
-    <link rel="stylesheet" href="../css/filtrar/post.css">
-    
-    <%- include('../partials/header'); %>
+  <!-- LINK's -->
+  <link rel="stylesheet" href="../css/home/style.css">
+  <link rel="stylesheet" href="../css/home/navbar.css">
+  <link rel="stylesheet" href="../css/home/carrousel.css">
+  <link rel="stylesheet" href="../css/filtrar/post.css">
+  <link rel="stylesheet" href="../css/filtrar/style.css">
+
+  <%- include('../partials/header'); %>
 
 </head>
+
 <body>
   <%- include('../partials/navbar'); %>
-  <main>
-    <h1><%= tag %></h1>
-      <div class="postagens">
-          <div class="card-list">
-            <% posts.forEach(function(posts) { %>
-                <div class="cardi">
-                  <a href="../postagem/<%= posts._id %>">
-                    <figure class="card-image" style="background-image: url('../../<%= posts.capa %>');" >
-                    </figure>
-                  </a> <!-- Adicione o fechamento da tag <a> aqui -->
-                  <div class="card-h">
-                    <%= posts.info.titulo %>
-                    <a href="/usuario/<%= posts.autor.nome %>">
-                      <div class="post-autor-info">
-                        <%= posts.autor.nome %>
-                        <img class="foto-user-post" src="<%= posts.autor.foto %>" alt="">
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              <% }) %>              
-        </div>
+    <div class="banner" id="banner">
+      <div class="banner-espaco-1">
+        <span>Encontre o <i cass="frase" id="frase">Programador</i><br>certo para seu projeto</span>
+      </div>
     </div>
-  </main>
-    <script src="../js/home/navbar.js"></script>
+    <div class="conteudo">
+      <div class="carrosel">
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <ul class="carousel">
+            <button class="cardd" id="categoria1">
+              <a href="/filtrar/Design IA#search">
+                <li class="card c1">
+                  <h2>Design IA</h2>
+                </li>
+              </a>
+            </button>
+            <button class="cardd" id="categoria2">
+              <a href="/filtrar/Programação#search">
+                <li class="card c2">
+                  <h2>Logo Maker</h2>
+                </li>
+              </a>
+            </button>
+            <button class="cardd" id="categoria3">
+              <a href="/filtrar/Web Design#search">
+                <li class="card c3">
+                  <h2>Web-Design <br> UI / UX </h2>
+                </li>
+              </a>
+            </button>
+            <button class="cardd" id="categoria3">
+              <a href="/filtrar/Social Mídia#search">
+                <li class="card c4">
+                  <h2>Social Mídia</h2>
+                </li>
+              </a>
+            </button>
+            <button class="cardd" id="categoria4">
+              <a href="/filtrar/Design de Produto#search">
+                <li class="card c5">
+                  <h2>Design de Produto</h2>
+                </li>
+              </a>
+            </button>
+            <button class="cardd" id="categoria5">
+              <a href="/filtrar/Design 3D#search">
+                <li class="card c6">
+                  <h2>Design 3D</h2>
+                </li>
+              </a>
+            </button>
+          </ul>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    </div>
+    <main>
+      <form action="/pesquisa#search" method="GET">
+        <div class="div-busca">
+          <div class="guia-busca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input placeholder="Ex: UI/UX, Design, Página Web" type="search" name="pesquisa" class="pesquisa"
+              id="pesquisa">
+          </div>
+          <button type="submit" class="btn-pesquisar" id="btn-pesquisar" name="submit">Pesquisar</button>
+        </div>
+      </form>
+      <div class="resultado">
+        <div class="res-pesq">
+          <h1>Resultados para <b>
+              <%= pesquisa %>
+            </b></h1>
+          <h1></h1>
+        </div>
+      </div>
+      <div class="postagens" id="search">
+        <div class="card-list">
+          <% posts.forEach(function(posts) { %>
+            <div class="cardi">
+              <a href="../postagem/<%= posts._id %>">
+                <figure class="card-image" style="background-image: url('../../<%= posts.capa %>');">
+                </figure>
+              </a> <!-- Adicione o fechamento da tag <a> aqui -->
+              <div class="card-h">
+                <%= posts.info.titulo %>
+                  <a href="/usuario/<%= posts.autor.nome %>">
+                    <div class="post-autor-info">
+                      <%= posts.autor.nome %>
+                        <img class="foto-user-post" src="<%= posts.autor.foto %>" alt="">
+                    </div>
+                  </a>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer'); %>
+      <script src="../js/home/navbar.js"></script>
+      <script src="../js/home/carrousel.js"></script>
+      <script src="../js/home/frase.js"></script>
 </body>
+
 </html>
